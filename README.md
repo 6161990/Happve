@@ -29,7 +29,7 @@
 
 `Tool & Program`   
 * IntelliJ IDEA 2021-03v
-* Navicat Premium 15.0.[A조 최종프로젝트_20210802.xls](https://github.com/6161990/Happve/files/7113172/A._20210802.xls)
+* Navicat Premium 15.0
 * Visual Studio Code
 * Adobe XD
 
