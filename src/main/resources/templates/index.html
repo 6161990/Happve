@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <!-- <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" /> -->
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/index/css/index.css" th:href="@{/css/index/css/index.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/index/css/styleguide.css" th:href="@{/css/index/css/styleguide.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/index/css/globals.css" th:href="@{/css/index/css/globals.css}"/>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+    
+</head>
+<body style="margin: 0; background: #ffffff">
+  <input type="hidden" id="anPageName" name="page" value="index" />
+  <div class="container-center-horizontal">
+    <div class="index screen">
+      
+      <!-- <헤더> 평점 및 리뷰 / 회원가입 / 건의하기 / 로그인 -->
+        <header class="header-unknown">
+          <div class="overlap-group">
+            <div class="header-buttons">
+  
+              <!-- 메인으로 -->
+              <form th:action="@{/}" method="get">
+                <button class="header-title">Happve</button>
+              </form>
+              
+              <!-- 커뮤니티로 -->
+              <form th:action="@{/api/reviewList}" method="get">
+                <button class="header-commu">평점 및 리뷰</button>
+              </form>
+              
+              <!-- 회원가입으로 -->
+              <form th:action="@{/signup}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-signup">회원가입</button>
+              </form>
+              
+              <!-- 건의하기로 -->
+              <form th:action="@{/suggestion}" method="get">
+                <button class="header-con">건의하기</button>
+              </form>
+              
+              <form th:action="@{/mypage}" method="get" sec:authorize="isAuthenticated()">
+                <button class="headermypage">
+                  <img class="icon-awesome-user-circle" src="css/headerunknown/img/icon-awesome-user-circle-1@1x.png" />
+                </button>
+              </form>
+              
+              <!-- 로그인 -->
+              <form th:action="@{/login}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그인</div>
+                </button>
+              </form>
+              
+              <!-- 로그아웃 -->
+              <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그아웃</div>
+                </button>
+              </form>
+              
+            </div>
+
+
+  
+          </div>
+        </header>
+
+
+        <div class="overlap-group-1">
+          <div class="overlap-group1-1">
+            <div class="searchback"></div>
+            <div class="searchtext">동참해 보세요!<br />한끼의 채식을 시작으로 병든 지구를 지킬 수 있어요!</div>
+
+            <!-- 검색 1111111-->
+            <form th:action="@{/index/search}" method="get">
+              <select class="searchselect1" name="type" >
+
+                <option value="title">식당</option>
+                <option value="menu">음식</option>
+
+              </select>
+
+              <input type="text" class="searchtextbox1" placeholder="식당 또는 음식 검색" name="keyword"></input>
+              <button type="submit" class="searchbutton1"><div class="search">Search</div></button>
+            </form>
+
+
+
+          </div>
+          <div class="article1">
+            <div class="artiper">
+              <div class="flex-col">
+                <div class="humananimal">
+                  <div class="percent">30%</div>
+                  <div class="humananimaltext">인간</div>
+                </div>
+                <div class="meat">
+                  <div class="percent-1">67%</div>
+                  <div class="meatanimaltext">식용동물</div>
+                </div>
+              </div>
+              <div class="wild">
+                <div class="percent-2">3%</div>
+                <div class="wildanimaltext">야생동물</div>
+              </div>
+            </div>
+            <div class="artibox">
+              <div class="artitext">
+                바다를 제외한 지구에는 몇 퍼센트의 야생동물이 살고 있을까요? <br />사실 3%밖에 살고 있지 않습니다.
+                나머지 97% 중 30%가 우리 인간이고, 무려 67%의 동물이 식용으로 사육되고 있는 동물입니다. 이와 같이 우리가
+                고기를 너무 많이 먹음으로써 지구에 여러 가지 문제들이 발생하는데 대표적으로 기후변화 문제를 들 수
+                있습니다.
+              </div>
+            </div>
+          </div>
+          <div class="article2">
+            <div class="arti2title">인간의 관측이래 최대 속도</div>
+            <div class="flex-row">
+              <div class="flex-col-1">
+                <div class="text applesdgothicneo-regular-normal-rhino-35px">약 1만년전의 1만년간의 기온변화</div>
+                <div class="ltext2">
+                  <span class="applesdgothicneo-regular-normal-rhino-35px">평균기온 약 </span
+                  ><span class="span1">4도</span><span class="applesdgothicneo-regular-normal-rhino-35px"> 상승</span>
+                </div>
+              </div>
+              <h1 class="x25times">25배</h1>
+              <div class="flex-col-2">
+                <div class="text applesdgothicneo-regular-normal-rhino-35px">산업화이후, 100년간의 기온변화</div>
+                <div class="rtext1">
+                  <span class="applesdgothicneo-regular-normal-rhino-35px">평균기온 약 </span
+                  ><span class="span1">1도</span><span class="applesdgothicneo-regular-normal-rhino-35px"> 상승</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solustion">
+          <div class="soltitletext">여러가지 기후변화 대책</div>
+          <div class="flex-row-1">
+            <div class="sol1">
+              <div class="overlap-group">
+                <div class="back"></div>
+                <div class="sol1tree">
+                  <div class="treetext applesdgothicneo-regular-normal-rhino-25px">나무심기</div>
+                </div>
+                <div class="sol1text applesdgothicneo-regular-normal-white-25px">
+                  나무는 이산화탄소를 상쇄<br />하는 기능을 가지고 있습니다.<br />1ha의 삼림에는 어른 50명이<br />평생
+                  마실 산소를 제공합니다.
+                </div>
+              </div>
+            </div>
+            <div class="flex-row-item">
+              <div class="overlap-group">
+                <div class="back"></div>
+                <div class="sol2driving">
+                  <div class="drivingtext applesdgothicneo-regular-normal-rhino-25px">옳바른 운전습관</div>
+                </div>
+                <div class="sol2text applesdgothicneo-regular-normal-white-25px">
+                  신호를 기다릴때 기어를 N에<br />놓기만 해도 연간 약 9천만<br />그루의 나무를 심는 효과가<br />있습니다.
+                </div>
+              </div>
+            </div>
+            <div class="flex-row-item">
+              <div class="overlap-group">
+                <div class="back"></div>
+                <div class="sol3recycle">
+                  <div class="recycletext applesdgothicneo-regular-normal-rhino-25px">재활용</div>
+                </div>
+                <div class="sol3text applesdgothicneo-regular-normal-white-25px">
+                  대부분의 쓰레기는 매립되거나<br />소각되고 있습니다. 재활용 되어<br />지지 않은 플라스틱에서 대량의<br />유해가스가
+                  발생되고 있습니다.
+                </div>
+              </div>
+            </div>
+            <div class="flex-row-item">
+              <div class="overlap-group">
+                <div class="back"></div>
+                <div class="sol4energy">
+                  <div class="energy applesdgothicneo-regular-normal-rhino-25px">에너지 절약</div>
+                </div>
+                <div class="sol4text applesdgothicneo-regular-normal-white-25px">
+                  전기의 약 80%는 화력발전에<br />의존하고 있습니다. 화력발전에<br />의해 많은 환경오염을 야기하고<br />있습니다.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sol5">
+            <div class="overlap-group1-2">
+              <div class="so5back"></div>
+              <div class="sol5meat"><div class="sol5meattitle">고기소비 줄이기</div></div>
+              <div class="sol5text2">고기소비를 줄이는 것이 가장 유력한 방법입니다.</div>
+              <div class="sol5text1">
+                식용동물 사육은 복합적인 환경오염을 야기하고 있습니다. 쇠고기 1kg을 만들기 위해서는<br />16kg의 옥수수가
+                필요하고 소가 자라면서 발생하는 메탄가스와 운송에서 발생하는 여러 유해<br />가스는 지구에 치명적인
+                환경문제를 만들어 내고 있습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <!-- 검색2 22222-->
+      <form th:action="@{/index/upSearch}" method="GET">
+        <div class="flex-row-2">
+          <div class="bottomtext">건강한 한끼의 채식을 시작으로<br />많은 야생동물과 우리 인간을 살릴 수 있습니다.</div>
+
+          <select class="searchselect2" name="type" >
+
+            <option value="title">식당</option>
+            <option value="menu">음식</option>
+
+          </select>
+
+          <input class="searchtextbox2" placeholder="식당 또는 음식" name="keyword"></input>
+          <button type="submit" class="searchbutton2"><div class="search">Search</div></button>
+
+        </div>
+      </form>
+
+        <footer class="footer">
+          <div class="overlap-group6">
+            <div class="footerback">
+              <div class="footerbakc1"></div>
+              <div class="footerback2"></div>
+            </div>
+
+            <!-- 푸터 타이틀 로고 -->
+            <form action="" method="post">
+              <button class="ftitle">Happve</button>
+            </form>
+
+            <div class="hashtag">#stop<br />EATING<br />MEat</div>
+            <div class="contact">
+              <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+              <div class="line"></div>
+              <p class="address komet-light-rhino-14px">
+                123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+              </p>
+            </div>
+            <div class="link">
+              <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+              <div class="line"></div>
+              <p class="text-1 komet-light-rhino-14px">The issue<br />How we help<br />Get involved<br />Latest news</p>
+            </div>
+            <div class="followus">
+              <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+              <div class="line"></div>
+              <div class="text-2 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+            </div>
+          </div>
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+
+</html>

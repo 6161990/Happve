@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/commu/css/commu.css"  th:href="@{/css/commu/css/commu.css}" />
+    <link rel="stylesheet" type="text/css" href="css/commu/css/styleguide.css" th:href="@{/css/commu/css/styleguide.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/commu/css/globals.css" th:href="@{/css/commu/css/globals.css}" />
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="commu" />
+    <div class="container-center-horizontal">
+      <div class="commu screen">
+        <div class="overlap-group-1">
+
+          <!-- <헤더> 평점 및 리뷰 / 회원가입 / 건의하기 / 로그인-->
+          <header class="header-unknown">
+            <div class="overlap-group">
+              <div class="header-buttons">
+    
+                <!-- 메인으로 -->
+              <form th:action="@{/}" method="get">
+                <button class="header-title">Happve</button>
+              </form>
+              
+              <!-- 커뮤니티로 -->
+              <form th:action="@{/api/reviewList}" method="get">
+                <button class="header-commu">평점 및 리뷰</button>
+              </form>
+              
+              <!-- 회원가입으로 -->
+              <form th:action="@{/signup}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-signup">회원가입</button>
+              </form>
+              
+              <!-- 건의하기로 -->
+              <form th:action="@{/suggestion}" method="get">
+                <button class="header-con">건의하기</button>
+              </form>
+              
+              <form th:action="@{/mypage}" method="get" sec:authorize="isAuthenticated()">
+                <button class="headermypage">
+                  <img class="icon-awesome-user-circle" src="css/headerunknown/img/icon-awesome-user-circle-1@1x.png" />
+                </button>
+              </form>
+              
+              <!-- 로그인 -->
+              <form th:action="@{/login}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그인</div>
+                </button>
+              </form>
+              
+              <!-- 로그아웃 -->
+              <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그아웃</div>
+                </button>
+              </form>
+                
+              </div>
+
+              <!-- 상단검색 -->
+              <form th:action="@{/index/upSearch}" method="GET">
+
+                <button type="submit" class="searchbutton"><div class="search">Search</div></button>
+                <input type="text" class="searchtextbox" value="식당 또는 음식" name="keyword"><img class="texttext" src="css/searchresult/img/texttext@1x.png" />
+              </form>
+    
+            </div>
+          </header>
+
+        </div>
+        
+        <!-- 리뷰검색 -->
+        <div class="overlap-group1">
+          <div class="keyback"><div class="keybacktext">방문객들의 리뷰를 검색해보세요!</div></div>
+          <form action="" method="post">
+            <button class="keywordbutton"><div class="keysearchbutton">Search</div></button>
+            <input type="text" class="keywordtextbox" value="키워드 입력"></input>
+          </form>
+        </div>
+
+        <!-- 리뷰1 -->
+
+        <div class="review1" th:each="reviewList:${reviewForCommu}">
+
+          <div class="flex-col">
+            <div class="reviewname">
+              <div class="overlap-group7">
+                <div class="nameback"></div>
+                <!-- 리뷰 사용자 이름 -->
+                <div class="name komet-regular-normal-rhino-14px" th:text="*{reviewList.review.member.nickname}" >호박고구마</div>
+              </div>
+            </div>
+            <!-- 리뷰 내용 -->
+            <a href="item.html" th:href="@{/api/{crtfc_upso_mgt_sno}(crtfc_upso_mgt_sno=${reviewList.review.crtfcUpsoMgtSno})}">
+            <p class="content applesdgothicneo-regular-normal-white-15px" th:text="*{reviewList.review.content}">
+              맛있다맛있다맛있다 맛있다<br />맛있다맛있다맛있다맛있 맛있다맛있다맛있다맛있다맛있다 맛있다맛있다
+              맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다.
+              맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+              맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+            </p></a>
+
+            <div class="flex-row" >
+              <!-- 이미지1 -->
+              <img class="pic1r border-1px-dove-gray" th:each="image : ${reviewList.image}" th:src="'/getFiles/'+${image}"></img>
+            </div>
+          </div>
+          <div class="flex-col-1">
+            <!-- 날짜 -->
+            <p class="date applesdgothicneo-regular-normal-white-15px" th:text="${reviewList.review.regdate}">2021-01–01</p>
+
+            <!-- 별 점수 -->
+            <div class="reviewrating">
+              <div class="overlap-group2">
+                <p class="ratingtext applesdgothicneo-regular-normal-rhino-20px" th:text="${reviewList.review.rating}">3개</p>
+                <img class="ratingicon" src="commu/img/ratingicon1@1x.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- 
+        <div class="review">
+          <div class="flex-col">
+            <div class="reviewname">
+              <div class="overlap-group7">
+                <div class="nameback"></div>
+                <div class="name komet-regular-normal-rhino-14px">호박고마</div>
+              </div>
+            </div>
+            <p class="content applesdgothicneo-regular-normal-rhino-15px">
+              맛있다맛있다맛있다 맛있다<br />맛있다맛있다맛있다맛있 맛있다맛있다맛있다맛있다맛있다 맛있다맛있다
+              맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+              맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+            </p>
+            <div class="flex-row">
+              <div class="pic1r border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-4" src="img/file--1@1x.png" />
+                  <img class="x2-4" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic2r2 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-5" src="img/file--1@1x.png" />
+                  <img class="x2-5" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic3r2 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-6" src="img/file--1@1x.png" />
+                  <img class="x2-6" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic4r2 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-7" src="img/file--1@1x.png" />
+                  <img class="x2-7" src="img/file--2@1x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col-1">
+            <div class="date applesdgothicneo-regular-normal-rhino-15px">2021-01–01</div>
+            <div class="reviewrating-1">
+              <div class="overlap-group2">
+                <div class="ratingtext-1">3개</div>
+                <img class="ratingicon" src="img/ratingicon2@1x.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review2">
+          <div class="flex-col">
+            <div class="reviewname">
+              <div class="overlap-group7">
+                <div class="nameback"></div>
+                <div class="name komet-regular-normal-rhino-14px">박고구마</div>
+              </div>
+            </div>
+            <p class="content applesdgothicneo-regular-normal-white-15px">
+              맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있 맛있다맛있다맛있다맛있다맛있다 맛있다맛있다 맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다.
+              맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+              맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+            </p>
+            <div class="flex-row">
+              <div class="pic1r border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-8" src="img/file--1@1x.png" />
+                  <img class="x2-8" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic2r3 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-9" src="img/file--1@1x.png" />
+                  <img class="x2-9" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic3r3 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-10" src="img/file--1@1x.png" />
+                  <img class="x2-10" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic4r3 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-11" src="img/file--1@1x.png" />
+                  <img class="x2-11" src="img/file--2@1x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col-1">
+            <div class="date applesdgothicneo-regular-normal-white-15px">2021-01–01</div>
+            <div class="reviewrating">
+              <div class="overlap-group2">
+                <div class="ratingtext applesdgothicneo-regular-normal-rhino-20px">3개</div>
+                <img class="ratingicon" src="img/ratingicon1@1x.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review">
+          <div class="flex-col">
+            <div class="reviewname">
+              <div class="overlap-group7">
+                <div class="nameback"></div>
+                <div class="name komet-regular-normal-rhino-14px">호박구마</div>
+              </div>
+            </div>
+            <p class="content applesdgothicneo-regular-normal-rhino-15px">
+              맛있다맛있다맛있다 맛있다<br />맛있다맛있다맛있다맛있 맛있다맛있다맛있다맛있다맛있다 맛있다맛있다
+              맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다.
+              맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+              맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+            </p>
+            <div class="flex-row">
+              <div class="pic1r border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-12" src="img/file--1@1x.png" />
+                  <img class="x2-12" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic3r4 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-13" src="img/file--1@1x.png" />
+                  <img class="x2-13" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic4r4 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-14" src="img/file--1@1x.png" />
+                  <img class="x2-14" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic5r4 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-15" src="img/file--1@1x.png" />
+                  <img class="x2-15" src="img/file--2@1x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col-1">
+            <div class="date applesdgothicneo-regular-normal-rhino-15px">2021-01–01</div>
+            <div class="reviewrating-1">
+              <div class="overlap-group2">
+                <div class="ratingtext-1">3개</div>
+                <img class="ratingicon" src="img/ratingicon2@1x.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review2">
+          <div class="flex-col">
+            <div class="reviewname">
+              <div class="overlap-group7">
+                <div class="nameback"></div>
+                <div class="name komet-regular-normal-rhino-14px">호구마</div>
+              </div>
+            </div>
+            <p class="content applesdgothicneo-regular-normal-white-15px">
+              맛있다맛있다맛있다 맛있다<br />맛있다맛있다맛있다맛있 맛있다맛있다맛있다맛있다맛있다 맛있다맛있다
+              맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+              맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다<br />맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다맛있다
+            </p>
+            <div class="flex-row">
+              <div class="pic1r border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-16" src="img/file--1@1x.png" />
+                  <img class="x2-16" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic2r5 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-17" src="img/file--1@1x.png" />
+                  <img class="x2-17" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic3r5 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-18" src="img/file--1@1x.png" />
+                  <img class="x2-18" src="img/file--2@1x.png" />
+                </div>
+              </div>
+              <div class="pic4r5 border-1px-dove-gray">
+                <div class="overlap-group">
+                  <img class="x1-19" src="img/file--1@1x.png" />
+                  <img class="x2-19" src="img/file--2@1x.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-col-1">
+            <div class="date applesdgothicneo-regular-normal-white-15px">2021-01–01</div>
+            <div class="reviewrating">
+              <div class="overlap-group2">
+                <div class="ratingtext applesdgothicneo-regular-normal-rhino-20px">3개</div>
+                <img class="ratingicon" src="img/ratingicon1@1x.png" />
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <footer class="footer">
+          <div class="overlap-group2-2">
+            <div class="footerback">
+              <div class="footerback1"></div>
+              <div class="footerback2"></div>
+            </div>
+            <div class="line236"></div>
+            <div class="line237"></div>
+            <div class="line238"></div>
+            <div class="happve">Happve</div>
+            <div class="stopeatingm-eat">#stop<br />EATING<br />MEat</div>
+            <p class="text-1 komet-light-rhino-14px">The issue<br />How we help<br />Get involved<br />Latest news</p>
+            <div class="text-2 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+            <p class="address komet-light-rhino-14px">
+              123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+            </p>
+            <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+            <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+            <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

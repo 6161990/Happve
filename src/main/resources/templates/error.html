@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/errorpage/css/errorpage.css" th:href="@{/css/errorpage/css/errorpage.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/errorpage/css/styleguide.css" th:href="@{/css/errorpage/css/styleguide.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/errorpage/css/globals.css" th:href="@{/css/errorpage/css/globals.css}"/>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="errorpage" />
+    <div class="container-center-horizontal">
+      <div class="errorpage screen">
+        <div class="overlap-group-1">
+          <div class="errorback">
+            <div class="overlap-group2"><div class="title">Happve</div></div>
+            <div class="overlap-group1">
+              <div class="x1"></div>
+              <div class="x2"></div>
+              <div class="x3"></div>
+              <div class="title-1">error</div>
+              <div class="title-2">죄송합니다.<br />요청하신 페이지를 찾을 수 없습니다.</div>
+            </div>
+          </div>
+
+          <!-- 에러메세지 -->
+          <h1 class="errormassage">404</h1>
+          
+          <!-- 이전 페이지버튼 -->
+          <form action="" method="post">
+            <button type="" class="previousbutton">
+              <div class="overlap-group">
+                <div class="prebox"></div>
+                <div class="pre">이전 페이지</div>
+              </div>
+            </button>
+          </form>
+          
+          <!-- 메인페이지 버튼 -->
+          <form action="/index" method="get">
+            <button type="" class="mainpagebutton">
+              <div class="overlap-group">
+                <div class="mainbox"></div>
+                <div class="main">메인 페이지</div>
+              </div>
+            </button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,976 @@
+/* screen - signup */
+.headermypage {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 24px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 55px;
+  min-width: 48px;
+  padding: 6.1px;
+
+  border: 0;
+  outline: 0;
+}
+
+.icon-awesome-user-circle {
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.icon-awesome-user-circle {
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+.signup {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1513px;
+  width: 1920px;
+}
+
+.signup .overlap-group-1 {
+  height: 128px;
+  position: relative;
+  width: 1920px;
+}
+
+.signup .header {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 128px;
+  left: 0;
+  padding: 21px 190px;
+  position: absolute;
+  top: 0;
+}
+
+.signup .title {
+  align-self: flex-end;
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: 55px;
+  font-weight: 800;
+  height: 73px;
+  letter-spacing: 0;
+  line-height: 55px;
+  text-align: center;
+  width: 210px;
+  border: 0;
+  outline: 0;
+  background-color:transparent;
+}
+
+.signup .commu {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 710px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 88px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 300;
+  border: 0;
+  outline: 0;
+  background-color:transparent;
+}
+
+.signup .header-signup {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 300;
+  border: 0;
+  outline: 0;
+  background-color:transparent;
+}
+
+.signup .con {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 300;
+  border: 0;
+  outline: 0;
+  background-color:transparent;
+}
+
+.signup .login {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 75px;
+  min-width: 162px;
+  border: 0;
+  outline: 0;
+  background-color:transparent;
+}
+
+.signup .overlap-group2 {
+  height: 48px;
+  position: relative;
+  width: 162px;
+}
+
+.signup .loginback {
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 160px;
+}
+
+.signup .logintext {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  height: 24px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  width: 162px;
+}
+
+.signup .searchbutton {
+  align-items: flex-end;
+  background-color: var(--rhino);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  left: 862px;
+  padding: 9.5px 49px;
+  position: absolute;
+  top: 43px;
+  border: 0;
+  outline: 0;
+}
+
+.signup .searchbuttontext {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 21px;
+  min-width: 50px;
+  white-space: nowrap;
+}
+
+.signup .searchtextbox {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  left: 450px;
+  padding: 12px 22px;
+  position: absolute;
+  top: 43px;
+  min-width: 401px;
+  color: lightgray;
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+  border: 0;
+  outline: 0;
+}
+
+.signup .searchtextboxtext {
+  height: 21px;
+  object-fit: cover;
+  width: 139px;
+}
+
+.signup .overlap-group {
+  height: 1028px;
+  position: relative;
+  width: 1920px;
+}
+
+.signup .back {
+  align-items: flex-start;
+  display: flex;
+  height: 1028px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.signup .backimg {
+  align-items: flex-start;
+  background-image: url(../img/vegetablesff@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  height: 1028px;
+  left: 0;
+  min-width: 1920px;
+  position: absolute;
+  top: 0;
+}
+
+.signup .x197 {
+  background-color: var(--blue-romance);
+  height: 1028px;
+  opacity: 0.5;
+  width: 1920px;
+}
+
+.signup .title-1 {
+  color: var(--white);
+  font-family: var(--font-family-floodstd-regular);
+  font-size: var(--font-size-xxxxxl);
+  height: 364px;
+  left: 1031px;
+  letter-spacing: 0;
+  line-height: 76px;
+  position: absolute;
+  top: 116px;
+  width: 386px;
+}
+
+.signup .signupbox {
+  align-items: center;
+  background-color: var(--rhino);
+  display: flex;
+  flex-direction: column;
+  left: 300px;
+  padding: 53.5px 62px;
+  position: absolute;
+  top: 20px;
+  width: 640px;
+}
+
+.signup .text-4 {
+  align-self: flex-start;
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-xxxl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin-bottom: -1px;
+  margin-left: 2px;
+  min-height: 35px;
+  white-space: nowrap;
+}
+
+.signup .id-input {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2px;
+  margin-top: 24px;
+  min-height: 63px;
+  width: 224px;
+}
+
+.signup .id {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-top: 1px;
+  min-height: 19px;
+  white-space: nowrap;
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.signup .errormessages {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+}
+
+.signup .idinputbox {
+  letter-spacing: -0.40px;
+  line-height: 32px;
+  margin-bottom: -6px;
+  margin-top: 1px;
+  min-height: 26px;
+  opacity: 0.7;
+  white-space: nowrap;
+
+  border: 0;
+  outline: 0;
+
+  width: 224px;
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+  background-color: transparent;
+}
+
+.signup .line9 {
+  height: 2px;
+  margin-top: 14px;
+  object-fit: cover;
+  width: 224px;
+}
+
+.signup .input {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  min-height: 62px;
+  width: 512px;
+}
+
+.signup .pass {
+  color: var(--white);
+  font-family: var(--font-family-komet-regular);
+  font-size: var(--font-size-m);
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-top: 1px;
+  min-height: 19px;
+  white-space: nowrap;
+}
+
+.signup .passinputbox {
+  letter-spacing: -0.40px;
+  line-height: 32px;
+  margin-bottom: -6px;
+  margin-top: 1px;
+  min-height: 26px;
+  opacity: 0.7;
+  white-space: nowrap;
+  border: 0;
+  outline: 0;
+
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+  background-color: transparent;
+  width: 512px;
+
+}
+
+.signup .line18 {
+  height: 2px;
+  margin-top: 13px;
+  object-fit: cover;
+  width: 512px;
+}
+
+.signup .passinputconfirm {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  min-height: 63px;
+  width: 512px;
+}
+
+.signup .passconfirm {
+  color: var(--white);
+  font-family: var(--font-family-komet-regular);
+  font-size: var(--font-size-m);
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-top: 2px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.signup .passconfrimbox {
+  letter-spacing: -0.40px;
+  line-height: 32px;
+  margin-bottom: -6px;
+  margin-top: 1px;
+  min-height: 26px;
+  opacity: 0.7;
+  white-space: nowrap;
+  border: 0;
+  outline: 0;
+
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+
+  background-color: transparent;
+  width: 512px;
+}
+
+.signup .line18-1 {
+  height: 2px;
+  margin-top: 13px;
+  object-fit: cover;
+  width: 512px;
+}
+
+.signup .email {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-top: 1px;
+  min-height: 19px;
+  white-space: nowrap;
+
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.signup .emailinputbox {
+  letter-spacing: -0.40px;
+  line-height: 32px;
+  margin-bottom: -6px;
+  margin-top: 1px;
+  min-height: 26px;
+  opacity: 0.2;
+  white-space: nowrap;
+
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+
+  background-color: transparent;
+  width: 512px;
+}
+
+.signup .line18-2 {
+  height: 2px;
+  margin-top: 13px;
+  object-fit: cover;
+  width: 512px;
+}
+
+.signup .vege {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-top: 1px;
+  min-height: 19px;
+  white-space: nowrap;
+
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.signup .vegeinputbox {
+  letter-spacing: -0.40px;
+  line-height: 32px;
+  margin-bottom: -6px;
+  margin-top: 1px;
+  min-height: 26px;
+  opacity: 0.2;
+  white-space: nowrap;
+
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+
+  background-color: transparent;
+  width: 512px;
+}
+
+.signup .x18 {
+  height: 2px;
+  margin-top: 13px;
+  object-fit: cover;
+  width: 512px;
+}
+
+.signup .text-3 {
+  align-self: flex-end;
+  color: var(--white);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-xxxl);
+  font-weight: 700;
+  height: 73px;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin-top: 64px;
+  text-align: center;
+  width: 514px;
+}
+
+.signup .signupbutton {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 125px;
+  margin-top: 70px;
+  min-width: 258px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.signup .overlap-group2-1 {
+  height: 56px;
+  position: relative;
+  width: 258px;
+}
+
+.signup .signupback {
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  height: 56px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 256px;
+}
+
+.signup .signupsend {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  height: 29px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+  white-space: nowrap;
+  width: 258px;
+}
+
+.signup .footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 249px;
+  width: 1920px;
+}
+
+.signup .x239 {
+  background-color: #344362;
+  height: 12px;
+  width: 1920px;
+}
+
+.signup .flex-row {
+  align-items: center;
+  display: flex;
+  height: 138px;
+  margin-right: 1.0px;
+  margin-top: 100px;
+  min-width: 1619px;
+}
+
+.signup .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 12.44px;
+  min-width: 890px;
+}
+
+.signup .flex-row-2 {
+  align-items: center;
+  display: flex;
+  height: 110px;
+  min-width: 626px;
+}
+
+.signup .happve {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 50px;
+  font-weight: 700;
+  height: 70px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: 14.0px;
+  width: 194px;
+}
+
+.signup .flex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 263px;
+  min-height: 110px;
+  width: 169px;
+}
+
+.signup .contact-us {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.signup .x236 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.signup .address {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 4px;
+  margin-top: 7px;
+  min-height: 80px;
+  white-space: nowrap;
+}
+
+.signup .flex-col-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 83px;
+  min-height: 110px;
+  width: 181px;
+}
+
+.signup .links {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.signup .x237 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.signup .text-1 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 7px;
+  margin-top: 7px;
+  min-height: 80px;
+  white-space: nowrap;
+}
+
+.signup .flex-col-2 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.22px;
+  margin-left: 82px;
+  min-height: 129px;
+  width: 182px;
+}
+
+.signup .follow-us {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-left: 4px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.signup .x238 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.signup .text-2 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-top: 6px;
+  min-height: 100px;
+  white-space: nowrap;
+}
+
+.signup .stopeatingm-eat {
+  color: var(--rhino);
+  font-family: var(--font-family-floodstd-regular);
+  font-size: var(--font-size-xxxxl);
+  letter-spacing: 0;
+  line-height: 46px;
+  margin-left: 307px;
+  min-height: 138px;
+  min-width: 158px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* screen - header-unknown */
+
+.header-unknown {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  /* width: 1920px; */
+  position: fixed;
+  z-index: 1;
+}
+
+.header-unknown .overlap-group {
+  height: 128px;
+  position: relative;
+  min-width: 1920px;
+}
+
+.header-unknown .header-buttons {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  height: 128px;
+  left: 0;
+  padding: 19px 197.5px;
+  position: absolute;
+  top: 0;
+}
+
+.header-unknown .header-title {
+  align-self: flex-end;
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 55px;
+  min-height: 69px;
+  min-width: 190px;
+  text-align: center;
+  white-space: nowrap;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-commu {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 717px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 88px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-signup {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-con {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-login {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 75px;
+  min-width: 160px;
+  padding: 10.5px 55px;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .header-logintext {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 23px;
+  min-width: 48px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-unknown .header-search {
+  align-items: flex-start;
+  display: flex;
+  height: 46px;
+  left: 429px;
+  position: absolute;
+  top: 43px;
+}
+
+.header-unknown .header-searchdropdown {
+  align-items: flex-start;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 74px;
+  padding: 15px 23px;
+
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.header-unknown .header-searchtextboxtext {
+  height: 21px;
+  object-fit: cover;
+  width: 31px;
+}
+
+.header-unknown .header-searchinput {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  margin-left: 5px;
+  min-width: 342px;
+  padding: 12px 22px;
+
+  border: 0;
+  outline: 0;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 14px;
+
+}
+
+.header-unknown .header-searchtextboxtext-1 {
+  height: 21px;
+  object-fit: cover;
+  width: 139px;
+}
+
+.header-unknown .header-searchbutton {
+  align-items: flex-end;
+  align-self: flex-end;
+  background-color: var(--rhino);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 11px;
+  min-width: 150px;
+  padding: 9.5px 49px;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .header-searchbuttontext {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 21px;
+  min-width: 50px;
+  white-space: nowrap;
+}

@@ -1,0 +1,16 @@
+:root { 
+  --rhino: #354463;
+  --rhino-2: #344362;
+  --white: #ffffff;
+ 
+  --font-size-l: 50px;
+  --font-size-m: 35px;
+  --font-size-s: 18px;
+  --font-size-xl: 55px;
+  --font-size-xxl: 110px;
+ 
+  --font-family-applesd_gothic_neo-bold: "AppleSD Gothic Neo-Bold", Helvetica;
+  --font-family-applesd_gothic_neo-extrabold: "AppleSD Gothic Neo-ExtraBold", Helvetica;
+  --font-family-applesd_gothic_neo-medium: "AppleSD Gothic Neo-Medium", Helvetica;
+  --font-family-floodstd-regular: "FloodStd-Regular", Helvetica;
+}

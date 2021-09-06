@@ -1,0 +1,68 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: "AppleSD Gothic Neo-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/AppleSDGothicNeo-ExtraBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "FloodStd-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/.18085.otf") format("opentype");
+}
+@font-face {
+  font-family: "Komet-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/cloud-documents[1]");
+}
+@font-face {
+  font-family: "Komet-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/.36495.otf") format("opentype");
+}
+@font-face {
+  font-family: "AppleSD Gothic Neo-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/AppleSDGothicNeoM.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AppleSD Gothic Neo-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/AppleSDGothicNeo-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "AppleSD Gothic Neo-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/AppleSDGothicNeo-Bold.ttf") format("truetype");
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}

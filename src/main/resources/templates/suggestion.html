@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/suggestion/css/suggestion.css" th:href="@{/css/suggestion/css/suggestion.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/suggestion/css/styleguide.css" th:href="@{/css/suggestion/css/styleguide.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/suggestion/css/globals.css" th:href="@{/css/suggestion/css/globals.css}"/>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+  <style>
+    .field-error { color:darkorange; }
+  </style>
+    <input type="hidden" id="anPageName" name="page" value="con" />
+    <div class="container-center-horizontal">
+      <div class="con screen">
+
+        <header class="header-unknown">
+          <div class="overlap-group">
+            <div class="header-buttons">
+  
+              <!-- 메인으로 -->
+              <form th:action="@{/}" method="get">
+                <button class="header-title">Happve</button>
+              </form>
+              
+              <!-- 커뮤니티로 -->
+              <form th:action="@{/api/reviewList}" method="get">
+                <button class="header-commu">평점 및 리뷰</button>
+              </form>
+              
+              <!-- 회원가입으로 -->
+              <form th:action="@{/signup}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-signup">회원가입</button>
+              </form>
+              
+              <!-- 건의하기로 -->
+              <form th:action="@{/suggestion}" method="get">
+                <button class="header-con">건의하기</button>
+              </form>
+              
+              <form th:action="@{/mypage}" method="get" sec:authorize="isAuthenticated()">
+                <button class="headermypage">
+                  <img class="icon-awesome-user-circle" src="css/headerunknown/img/icon-awesome-user-circle-1@1x.png" />
+                </button>
+              </form>
+              
+              <!-- 로그인 -->
+              <form th:action="@{/login}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그인</div>
+                </button>
+              </form>
+              
+              <!-- 로그아웃 -->
+              <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그아웃</div>
+                </button>
+              </form>
+              
+            </div>
+            
+            <!-- 헤더검색 -->
+            <form action="" method="post">
+              <div class="header-search">
+    
+                <!-- 검색 드롭다운 -->
+                <select class="header-searchdropdown">
+                  <option value="area">지역</option>
+                  <option value="restaurant">식당</option>
+                  <option value="food">음식</option>
+                </select>
+    
+                <!-- 검색 인풋 -->
+                <input type="text" class="header-searchinput" placeholder="지역,식당 또는 음식 선택 후 검색">
+    
+                <!-- 검색 버튼 -->
+                <button class="header-searchbutton">
+                  <div class="header-searchbuttontext">Search</div>
+                </button>
+                
+              </div>
+            </form>
+  
+          </div>
+        </header>
+
+        <div class="overlap-group">
+          <div class="back">
+            <div class="text-1">Happve에 대한 소중한 의견을 남겨주세요.</div>
+            <h1 class="title">#stop<br />Eating<br />meat</h1>
+          </div>
+
+          <div class="conbox">
+            <div class="overlap-group1-1">
+              <div class="conback"><div class="concon">건의사항</div></div>
+
+              <!-- 건의사항 박스 -->
+              <h2 style="color:darkorange" th:if="${param.status}" th:text="'의견 전달 완료!'"></h2>
+              <form action="/suggestion" th:action="@{/suggestion}" method="post" th:object="${suggestionForm}">
+                <div class="emailinput">
+                  <div class="text-6">연락받으실 이메일</div>
+                  <input th:field="*{email}" th:errorclass="field-error" id="email" name="email" type="email" placeholder="이메일을 입력하세요" class="emailinputbox">
+                  <span class="field-error" th:errors="*{email}"> 이메일 오류 </span>
+                  <span class="field-error" th:errors="*{content}"> 컨텐츠 오류 </span>
+                  <img class="x18" src="css/suggestion/img/file--18@1x.png" />
+                </div>
+
+                <textarea th:field="*{content}" name="content" id="context" th:errorclass="field-error" class="contextarea">
+                  내용을 입력하세요!
+                </textarea>
+
+                <button type="submit" class="conbutton">
+                  <div class="overlap-group2">
+                    <div class="x240"></div>
+                    <div class="text-4">건의하기</div>
+                  </div>
+                </button>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+        
+        <div class="footer">
+          <div class="x239"></div>
+          <div class="flex-row">
+            <div class="flex-row-1">
+              <div class="flex-row-2">
+                <div class="happve-1">Happve</div>
+                <div class="flex-col">
+                  <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+                  <div class="x236"></div>
+                  <p class="address komet-light-rhino-14px">
+                    123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+                  </p>
+                </div>
+              </div>
+              <div class="flex-col-1">
+                <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+                <div class="x237"></div>
+                <p class="text-2 komet-light-rhino-14px">
+                  The issue<br />How we help<br />Get involved<br />Latest news
+                </p>
+              </div>
+            </div>
+            <div class="flex-col-2">
+              <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+              <div class="x238"></div>
+              <div class="text-3 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+            </div>
+            <div class="stopeatingm-eat">#stop<br />EATING<br />MEat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

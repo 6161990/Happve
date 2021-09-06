@@ -1,0 +1,19 @@
+:root { 
+  --blue-romance: #c1f7d5;
+  --rhino: #354463;
+ 
+  /* --font-size-l: 55px;
+  --font-size-m: 18px;
+  --font-size-s: 16px; */
+ 
+  --font-family-applesd_gothic_neo-bold: "AppleSD Gothic Neo-Bold", Helvetica;
+  --font-family-applesd_gothic_neo-extrabold: "AppleSD Gothic Neo-ExtraBold", Helvetica;
+  --font-family-applesd_gothic_neo-light: "AppleSD Gothic Neo-Light", Helvetica;
+}
+.applesdgothicneo-light-rhino-18px {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+}

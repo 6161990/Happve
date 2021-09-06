@@ -1,0 +1,904 @@
+/* screen - writereview */
+.headermypage {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 24px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 55px;
+  min-width: 48px;
+  padding: 6.1px;
+
+  border: 0;
+  outline: 0;
+}
+
+.icon-awesome-user-circle {
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.icon-awesome-user-circle {
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+.writereview {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1591px;
+  width: 1920px;
+}
+
+.writereview .overlap-group1 {
+  height: 128px;
+  position: relative;
+  width: 1920px;
+}
+
+.writereview .header {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 128px;
+  left: 0;
+  padding: 20px 190px;
+  position: absolute;
+  top: 0;
+}
+
+.writereview .title {
+  align-self: flex-end;
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: var(--font-size-xxxxl);
+  font-weight: 800;
+  height: 74px;
+  letter-spacing: 0;
+  line-height: 55px;
+  text-align: center;
+  width: 210px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.writereview .commu {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 710px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 88px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.writereview .signup {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.writereview .con {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+
+.writereview .login {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 75px;
+  min-width: 162px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.writereview .overlap-group2 {
+  height: 48px;
+  position: relative;
+  width: 162px;
+}
+
+.writereview .loginbutton {
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 160px;
+}
+
+.writereview .logintext {
+  height: 24px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+  width: 162px;
+}
+
+.writereview .searchbutton {
+  align-items: flex-end;
+  background-color: var(--rhino);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  left: 862px;
+  padding: 9.5px 49px;
+  position: absolute;
+  top: 43px;
+  outline: 0;
+  border: 0;
+}
+
+.writereview .search {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-l);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 21px;
+  min-width: 50px;
+  white-space: nowrap;
+}
+
+.writereview .searchbox {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  left: 450px;
+  padding: 12px 22px;
+  position: absolute;
+  top: 43px;
+  width: 400px;
+  outline: 0;
+  border: 0;
+  
+  color: lightgray;
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.writereview .x {
+  height: 21px;
+  object-fit: cover;
+  width: 139px;
+}
+
+.writereview .overlap-group-1 {
+  align-items: flex-start;
+  background-color: var(--rhino-2);
+  border: 1px solid #707070;
+  display: flex;
+  height: 1120px;
+  min-width: 1920px;
+  padding: 80px 116px;
+}
+
+.writereview .title-1 {
+  align-self: flex-end;
+  color: var(--white);
+  font-family: var(--font-family-floodstd-regular);
+  font-size: var(--font-size-xxxxxl);
+  height: 229px;
+  letter-spacing: 0;
+  line-height: 76px;
+  margin-bottom: 86.0px;
+  width: 260px;
+}
+
+.writereview .overlap-group2-1 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-left: 264px;
+  min-height: 956px;
+  padding: 39px 47px;
+  width: 640px;
+}
+
+.writereview .text1 {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin-bottom: -1px;
+  margin-left: 16px;
+  margin-top: 13px;
+  min-height: 35px;
+  white-space: nowrap;
+}
+
+.writereview .text2 {
+  color: var(--rhino-2);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 36px;
+  margin-bottom: -10px;
+  margin-left: 16px;
+  margin-top: 14px;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.writereview .ratingtext {
+  align-self: flex-end;
+  color: var(--rhino-2);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-right: 1px;
+  margin-top: 30px;
+  min-height: 19px;
+  min-width: 131px;
+  white-space: nowrap;
+}
+
+.writereview .rating {
+  align-items: flex-start;
+  align-self: flex-end;
+  background-color: var(--rhino-2);
+  display: flex;
+  height: 25px;
+  margin-left: 410px;
+  margin-right: 3px;
+  margin-top: 5px;
+  min-width: 129px;
+  padding: 2px 3px;
+}
+
+.writereview .starfill {
+  height: 20px;
+  object-fit: cover;
+  width: 21px;
+}
+
+.writereview .star {
+  height: 20px;
+  margin-left: 4px;
+  object-fit: cover;
+  width: 21px;
+}
+
+.writereview .writebox {
+  align-self: center;
+  background-color: var(--white);
+  height: 406px;
+  margin-right: 1.0px;
+  margin-top: 19px;
+  width: 541px;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.writereview .picuploadtext {
+  color: var(--rhino-2);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-left: 7px;
+  margin-top: 29px;
+  min-height: 19px;
+  white-space: nowrap;
+}
+
+.writereview .flex-row {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  margin-top: 7px;
+  min-width: 543px;
+}
+
+.writereview .picupbox {
+  background-color: var(--white);
+  height: 30px;
+  width: 401px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.writereview .picupbutton {
+  align-items: flex-start;
+  display: flex;
+  margin-left: -20px;
+  min-width: 131px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+.writereview .overlap-group5 {
+  height: 30px;
+  position: relative;
+  width: 131px;
+}
+
+.writereview .picupback {
+  background-color: var(--blue-romance);
+  height: 30px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 129px;
+}
+
+.writereview .picuptext {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 12px;
+  font-weight: 700;
+  height: 17px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+  width: 131px;
+}
+
+.writereview .picloadbox {
+  align-self: center;
+  background-color: var(--white);
+  height: 94px;
+  margin-right: 1.0px;
+  margin-top: 20px;
+  width: 541px;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+  padding: 5px;
+}
+
+.writereview .flex-row-1 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  margin-left: 3.0px;
+  margin-top: 39px;
+  min-width: 385px;
+}
+
+.writereview .uploadbutton {
+  align-items: flex-start;
+  display: flex;
+  min-width: 172px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+
+  margin-top: 50px;
+  margin-left: 65px;
+}
+
+.writereview .overlap-group {
+  height: 45px;
+  position: relative;
+  width: 172px;
+}
+
+.writereview .back {
+  background-color: var(--blue-romance);
+  height: 45px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 170px;
+}
+
+.writereview .text {
+  height: 23px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  white-space: nowrap;
+  width: 172px;
+}
+
+.writereview .cancelbutton {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 41px;
+  min-width: 172px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+
+  margin-top: 50px;
+}
+
+.writereview .footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 249px;
+  width: 1920px;
+}
+
+.writereview .x7 {
+  background-color: var(--blue-romance);
+  height: 12px;
+  width: 1920px;
+}
+
+.writereview .flex-row-2 {
+  align-items: center;
+  display: flex;
+  height: 138px;
+  margin-right: 1.0px;
+  margin-top: 100px;
+  min-width: 1619px;
+}
+
+.writereview .flex-row-3 {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 12.44px;
+  min-width: 890px;
+}
+
+.writereview .flex-row-4 {
+  align-items: center;
+  display: flex;
+  height: 110px;
+  min-width: 626px;
+}
+
+.writereview .happve {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: 50px;
+  font-weight: 800;
+  height: 70px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: 14.0px;
+  width: 194px;
+}
+
+.writereview .flex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 263px;
+  min-height: 110px;
+  width: 169px;
+}
+
+.writereview .contact-us {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.writereview .x4 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.writereview .address {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 4px;
+  margin-top: 7px;
+  min-height: 80px;
+  white-space: nowrap;
+}
+
+.writereview .flex-col-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 83px;
+  min-height: 110px;
+  width: 181px;
+}
+
+.writereview .links {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.writereview .x5 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.writereview .text-1 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 7px;
+  margin-top: 7px;
+  min-height: 80px;
+  white-space: nowrap;
+}
+
+.writereview .flex-col-2 {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.22px;
+  margin-left: 82px;
+  min-height: 129px;
+  width: 182px;
+}
+
+.writereview .follow-us {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-left: 4px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.writereview .x6 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.writereview .text-2 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-top: 6px;
+  min-height: 100px;
+  white-space: nowrap;
+}
+
+.writereview .stopeatingm-eat {
+  color: var(--rhino);
+  font-family: var(--font-family-floodstd-regular);
+  font-size: var(--font-size-xxxl);
+  letter-spacing: 0;
+  line-height: 46px;
+  margin-left: 307px;
+  min-height: 138px;
+  min-width: 158px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  justify-content: space-around;
+  /* padding: 0 0em; */
+  text-align: center;
+  width: -0.5em;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #C1F7D5;
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  -webkit-text-fill-color: #C1F7D5;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  -webkit-text-fill-color: white;
+}
+
+/* screen - header-unknown */
+
+.header-unknown {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  /* width: 1920px; */
+  position: fixed;
+  z-index: 1;
+}
+
+.header-unknown .overlap-group {
+  height: 128px;
+  position: relative;
+  min-width: 1920px;
+}
+
+.header-unknown .header-buttons {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  height: 128px;
+  left: 0;
+  padding: 19px 197.5px;
+  position: absolute;
+  top: 0;
+}
+
+.header-unknown .header-title {
+  align-self: flex-end;
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 55px;
+  min-height: 69px;
+  min-width: 190px;
+  text-align: center;
+  white-space: nowrap;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-commu {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 717px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 88px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-signup {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-con {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-login {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 75px;
+  min-width: 160px;
+  padding: 10.5px 55px;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .header-logintext {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 23px;
+  min-width: 48px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-unknown .header-search {
+  align-items: flex-start;
+  display: flex;
+  height: 46px;
+  left: 429px;
+  position: absolute;
+  top: 43px;
+}
+
+.header-unknown .header-searchdropdown {
+  align-items: flex-start;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 74px;
+  padding: 15px 23px;
+
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.header-unknown .header-searchtextboxtext {
+  height: 21px;
+  object-fit: cover;
+  width: 31px;
+}
+
+.header-unknown .header-searchinput {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  margin-left: 5px;
+  min-width: 342px;
+  padding: 12px 22px;
+
+  border: 0;
+  outline: 0;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 14px;
+
+}
+
+.header-unknown .header-searchtextboxtext-1 {
+  height: 21px;
+  object-fit: cover;
+  width: 139px;
+}
+
+.header-unknown .header-searchbutton {
+  align-items: flex-end;
+  align-self: flex-end;
+  background-color: var(--rhino);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 11px;
+  min-width: 150px;
+  padding: 9.5px 49px;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .header-searchbuttontext {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 21px;
+  min-width: 50px;
+  white-space: nowrap;
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="/css/mypage/css/mypagebookmark.css" th:href="@{/css/mypage/css/mypagebookmark.css}"/>
+    <link rel="stylesheet" type="text/css" href="/css/mypage/css/styleguide.css" th:href="@{/css/mypage/css/styleguide.css}"/>
+    <link rel="stylesheet" type="text/css" href="/css/mypage/css/globals.css" th:href="@{/css/mypage/css/globals.css}"/>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="mypagebookmark" />
+    <div class="container-center-horizontal">
+      <div class="mypagebookmark screen">
+
+            <header class="header-unknown">
+              <div class="overlap-group">
+                <div class="header-buttons">
+      
+                  <!-- 메인으로 -->
+              <form th:action="@{/}" method="get">
+                <button class="header-title">Happve</button>
+              </form>
+              
+              <!-- 커뮤니티로 -->
+              <form action="/api/reviewList" method="get">
+                <button class="header-commu">평점 및 리뷰</button>
+              </form>
+              
+              
+              
+              <!-- 건의하기로 -->
+              <form action="" method="get">
+                <button class="header-con">건의하기</button>
+              </form>
+              
+              <form action="" method="get">
+                <button class="headermypage">
+                  <img class="icon-awesome-user-circle" src="/css/headerunknown/img/icon-awesome-user-circle-1@1x.png" />
+                </button>
+              </form>
+  
+              <!-- 로그아웃 -->
+              <form th:action="@{/logout}" method="get" >
+                <button class="header-login">
+                  <div class="header-logintext">로그아웃</div>
+                </button>
+              </form>
+                  
+                </div>
+
+                <!-- 상단검색 -->
+                <form th:action="@{/index/upSearch}" method="GET">
+
+                  <button type="submit" class="searchbutton"><div class="search">Search</div></button>
+                  <input type="text" class="searchtextbox" placeholder="식당 또는 음식" name="keyword"><img class="texttext" src="css/searchresult/img/texttext@1x.png" />
+                </form>
+      
+              </div>
+            </header>
+        
+        <div class="overlap-group3">
+
+          <div class="back"></div>
+          <div class="flex-col-4">
+            <div class="resultbox-1" th:each="bookmarkresId:${bookmarkmemberlist}">
+              <div th:if="${bookmarkresId.restaurantId==bookmark.restaurantId}" th:each="bookmark:${bookmarklist}"> 
+              <div class="flex-row">
+                <!-- 식당이름 -->
+                <div class="resulttitle applesdgothicneo-regular-normal-rhino-30px" th:text="${bookmark.title}">식당이름이름</div>
+                <div class="rating">
+
+                  <!-- 별점평균 -->
+                  <div class="ratingpoint applesdgothicneo-regular-normal-blue-romance-30px">4.4</div>
+                </div>
+              </div>
+              <div class="flex-row-1">
+                <div class="viewcount">
+                  <img class="viewicon" src="/css/mypage/img/viewicon-1@1x.png" />
+
+                  <!-- 뷰어수 -->
+                  <div class="viewcountnum applesdgothicneo-regular-normal-rhino-15px">3,232</div>
+                </div>
+                <div class="bookmarkcount">
+                  <img class="bookmarkcounticon" src="css/mypage/img/bookmarkcounticon-1@1x.png" />
+
+                  <!-- 즐겨찾기수 -->
+                  <div class="bookmarkcountnum applesdgothicneo-regular-normal-rhino-15px">142</div>
+                </div>
+              </div>
+              <div class="address">
+                <div class="addresstitle applesdgothicneo-regular-normal-rhino-17px">주소</div>
+                <div class="flex-col">
+
+                  <!-- 도로명주소 -->
+                  <div class="addressold applesdgothicneo-regular-normal-rhino-17px" th:text="${bookmark.address}">서울특별시 어디구 김수로 12-1</div>
+                  <!-- 지번주소 -->
+                  <div class="addressstreet applesdgothicneo-regular-normal-rhino-17px" th:text="${bookmark.roadAddress}">서울시 어디구 리기동1가 21-54</div>
+
+                </div>
+              </div>
+              <div class="menu">
+                <div class="menutitle applesdgothicneo-regular-normal-rhino-17px">메뉴</div>
+
+                <!-- 메뉴 -->
+                <div class="menudata applesdgothicneo-regular-normal-rhino-17px" th:text="${bookmark.menu}">리코타베지&amp;아보카도샌드위치(락토,비건) / 플렉스 스테이크(락토,비건)</div>
+
+              </div>
+            
+              <div class="morebox">
+
+                <!-- 식당이름 -->
+
+                <form action="" method="post">
+                  <button type="button" th:onclick="|location.href='@{|/api/${bookmark.restaurantId}}'|" class="morebutton applesdgothicneo-regular-normal-star-dust-20px">더보기&gt;</button>
+                </form>
+
+              </div>
+              <img class="infodataline" src="css/mypage/img/infodataline-1@1x.png" />
+              </div>
+            </div>
+           
+            <!-- <div class="resultbox-2">
+              <div class="flex-row">
+                <div class="resulttitle applesdgothicneo-regular-normal-rhino-30px">식당이름이름</div>
+                <div class="rating">
+                  <div class="ratingpoint applesdgothicneo-regular-normal-blue-romance-30px">4.4</div>
+                </div>
+              </div>
+              <div class="flex-row-1">
+                <div class="viewcount">
+                  <img class="viewicon" src="mypage/img/viewicon-1@1x.png" />
+                  <div class="viewcountnum applesdgothicneo-regular-normal-rhino-15px">3,232</div>
+                </div>
+                <div class="bookmarkcount">
+                  <img class="bookmarkcounticon" src="mypage/img/bookmarkcounticon-1@1x.png" />
+                  <div class="bookmarkcountnum applesdgothicneo-regular-normal-rhino-15px">142</div>
+                </div>
+              </div>
+              <div class="address">
+                <div class="addresstitle applesdgothicneo-regular-normal-rhino-17px">주소</div>
+                <div class="flex-col">
+                  <div class="addressold applesdgothicneo-regular-normal-rhino-17px">서울특별시 어디구 김수로 12-1</div>
+                  <div class="addressstreet applesdgothicneo-regular-normal-rhino-17px">
+                    서울시 어디구 리기동1가 21-54
+                  </div>
+                </div>
+              </div>
+              <div class="menu">
+                <div class="menutitle applesdgothicneo-regular-normal-rhino-17px">메뉴</div>
+                <div class="menudata applesdgothicneo-regular-normal-rhino-17px">
+                  리코타베지&amp;아보카도샌드위치(락토,비건) / 플렉스 스테이크(락토,비건)
+                </div>
+              </div>
+              <div class="morebox">
+                <div class="moreresname applesdgothicneo-regular-normal-star-dust-20px">식당이름이름</div>
+                <div class="morebutton applesdgothicneo-regular-normal-star-dust-20px">더보기&gt;</div>
+              </div>
+              <img class="infodataline" src="mypage/img/infodataline-1@1x.png" />
+            </div> -->
+
+          </div>
+
+          <div class="flex-col-5">
+            <a th:href="@{/mypage}">
+              <div class="mypagebutton">
+                <div class="mypagetext applesdgothicneo-bold-white-28px">회원정보 </div>
+              </div></a>
+            <div class="bookmarkbutton"><div class="bookmarktext"> 즐겨찾기</div></div>
+          </div>
+
+          <div class="overlap-group">
+            <!-- <div class="resultbox">
+              <div class="flex-row">
+
+                식당이름
+                <div class="resulttitle applesdgothicneo-regular-normal-rhino-30px">식당이름이름</div>
+                <div class="rating">
+                  <div class="ratingpoint applesdgothicneo-regular-normal-blue-romance-30px">4.4</div>
+                </div>
+              </div>
+              <div class="flex-row-1">
+                <div class="viewcount">
+                  <img class="viewicon" src="mypage/img/viewicon-1@1x.png" />
+                  <div class="viewcountnum applesdgothicneo-regular-normal-rhino-15px">3,232</div>
+                </div>
+                <div class="bookmarkcount">
+                  <img class="bookmarkcounticon" src="mypage/img/bookmarkcounticon-1@1x.png" />
+                  <div class="bookmarkcountnum applesdgothicneo-regular-normal-rhino-15px">142</div>
+                </div>
+              </div>
+              <div class="address">
+                <div class="addresstitle applesdgothicneo-regular-normal-rhino-17px">주소</div>
+                <div class="flex-col">
+                  <div class="addressold applesdgothicneo-regular-normal-rhino-17px">서울특별시 어디구 김수로 12-1</div>
+                  <div class="addressstreet applesdgothicneo-regular-normal-rhino-17px">
+                    서울시 어디구 리기동1가 21-54
+                  </div>
+                </div>
+              </div>
+              <div class="menu">
+                <div class="menutitle applesdgothicneo-regular-normal-rhino-17px">메뉴</div>
+                <div class="menudata applesdgothicneo-regular-normal-rhino-17px">
+                  리코타베지&amp;아보카도샌드위치(락토,비건) / 플렉스 스테이크(락토,비건)
+                </div>
+              </div>
+              <div class="morebox">
+                <div class="moreresname applesdgothicneo-regular-normal-star-dust-20px">식당이름이름</div>
+                <div class="morebutton applesdgothicneo-regular-normal-star-dust-20px">더보기&gt;</div>
+              </div>
+              <img class="infodataline" src="mypage/img/infodataline-1@1x.png" />
+            </div> -->
+
+            <div class="footer">
+              <div class="x239"></div>
+              <div class="overlap-group1">
+                <div class="flex-row-2">
+                  <div class="flex-row-3">
+                    <div class="happve">Happve</div>
+                    <div class="flex-col-1">
+                      <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+                      <div class="x236"></div>
+                      <p class="address-1 komet-light-rhino-14px">
+                        123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex-col-2">
+                    <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+                    <div class="x237"></div>
+                    <p class="text-3 komet-light-rhino-14px">
+                      The issue<br />How we help<br />Get involved<br />Latest news
+                    </p>
+                  </div>
+                </div>
+                <div class="flex-col-3">
+                  <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+                  <div class="x238"></div>
+                  <div class="text-4 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+                </div>
+                <div class="stopeatingm-eat">#stop<br />EATING<br />MEat</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

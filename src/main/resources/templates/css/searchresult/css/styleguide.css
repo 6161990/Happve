@@ -1,0 +1,85 @@
+:root { 
+  --blue-romance: #c1f7d5;
+  --rhino: #354463;
+  --star-dust: #9fa1a5;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 17px;
+  --font-size-s: 15px;
+  --font-size-xl: 20px;
+  --font-size-xs: 14px;
+  --font-size-xxl: 28px;
+  --font-size-xxxl: 30px;
+ 
+  --font-family-applesd_gothic_neo-bold: "AppleSD Gothic Neo-Bold", Helvetica;
+  --font-family-applesd_gothic_neo-extrabold: "AppleSD Gothic Neo-ExtraBold", Helvetica;
+  --font-family-applesd_gothic_neo-medium: "AppleSD Gothic Neo-Medium", Helvetica;
+  --font-family-applesd_gothic_neo-regular: "AppleSD Gothic Neo-Regular", Helvetica;
+  --font-family-applesd_gothic_neo-light: "AppleSD Gothic Neo-Light", Helvetica;
+  --font-family-floodstd-regular: "FloodStd-Regular", Helvetica;
+  --font-family-komet-light: "Komet-Light", Helvetica;
+  --font-family-komet-regular: "Komet-Regular", Helvetica;
+}
+.applesdgothicneo-regular-normal-rhino-17px {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.applesdgothicneo-regular-normal-rhino-15px {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.applesdgothicneo-regular-normal-star-dust-20px {
+  color: var(--star-dust);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.applesdgothicneo-regular-normal-rhino-30px {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.applesdgothicneo-regular-normal-blue-romance-30px {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-regular);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.applesdgothicneo-medium-rhino-18px {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-medium);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.komet-light-rhino-14px {
+  color: var(--rhino);
+  font-family: var(--font-family-komet-light);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.komet-regular-normal-rhino-14px {
+  color: var(--rhino);
+  font-family: var(--font-family-komet-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}

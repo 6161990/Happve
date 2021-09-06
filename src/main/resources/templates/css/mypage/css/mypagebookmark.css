@@ -1,0 +1,907 @@
+/* screen - mypagebookmark */
+
+.mypagebookmark {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1489px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.mypagebookmark .header {
+  align-items: flex-start;
+  display: flex;
+  min-width: 1920px;
+}
+
+.mypagebookmark .overlap-group2 {
+  height: 128px;
+  position: relative;
+  width: 1920px;
+}
+
+.mypagebookmark .headerbox {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  height: 128px;
+  left: 0;
+  padding: 20px 190px;
+  position: absolute;
+  top: 0;
+}
+
+.mypagebookmark .title {
+  align-self: flex-end;
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: 55px;
+  font-weight: 800;
+  height: 74px;
+  letter-spacing: 0;
+  line-height: 55px;
+  text-align: center;
+  width: 205px;
+}
+
+.mypagebookmark .commu {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 710px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 88px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .mypage {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 68px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 79px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .con {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 67px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .x3 {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 24px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 131px;
+  min-width: 48px;
+  padding: 6.1px;
+}
+
+.mypagebookmark .icon-awesome-user-circle {
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}
+
+.mypagebookmark .searchbox {
+  align-items: flex-start;
+  display: flex;
+  height: 46px;
+  left: 429px;
+  position: absolute;
+  top: 43px;
+}
+
+.mypagebookmark .searchdropdown {
+  align-items: flex-start;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 74px;
+  padding: 12px 21.2px;
+}
+
+.mypagebookmark .searchtextboxtext {
+  height: 21px;
+  object-fit: cover;
+  width: 31px;
+}
+
+.mypagebookmark .searchinput {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  margin-left: 5px;
+  min-width: 342px;
+  padding: 12px 22px;
+}
+
+.mypagebookmark .searchtextboxtext-1 {
+  height: 21px;
+  object-fit: cover;
+  width: 139px;
+}
+
+.mypagebookmark .searchbutton {
+  align-items: flex-end;
+  align-self: flex-end;
+  background-color: var(--rhino);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 11px;
+  min-width: 150px;
+  padding: 9.5px 49px;
+}
+
+.mypagebookmark .search {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 21px;
+  min-width: 50px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .overlap-group3 {
+  height: 1361px;
+  position: relative;
+  width: 1921px;
+
+  margin-top: 127px;
+}
+
+.mypagebookmark .overlap-group {
+  height: 590px;
+  left: 0;
+  position: absolute;
+  top: 770px;
+  width: 1921px;
+}
+
+.mypagebookmark .resultbox {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 595px;
+  position: absolute;
+  top: 0;
+  width: 992px;
+}
+
+.mypagebookmark .flex-row {
+  align-items: flex-start;
+  display: flex;
+  height: 41px;
+  margin-left: 0.5px;
+  min-width: 216px;
+}
+
+.mypagebookmark .resulttitle {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 30px;
+  min-height: 38px;
+  min-width: 158px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .rating {
+  align-items: flex-end;
+  background-color: var(--rhino);
+  display: flex;
+  height: 36px;
+  justify-content: flex-end;
+  margin-left: 8px;
+  min-width: 50px;
+  padding: 0 3px;
+}
+
+.mypagebookmark .ratingpoint {
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: -5px;
+  min-height: 38px;
+  min-width: 42px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 3.5px;
+  margin-top: 19px;
+  min-width: 136px;
+}
+
+.mypagebookmark .viewcount {
+  align-items: center;
+  display: flex;
+  height: 19px;
+  min-width: 70px;
+  opacity: 0.5;
+}
+
+.mypagebookmark .viewicon {
+  height: 15px;
+  object-fit: cover;
+  width: 22px;
+}
+
+.mypagebookmark .viewcountnum {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: -4px;
+  margin-left: 10px;
+  min-height: 21px;
+  min-width: 37px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .bookmarkcount {
+  align-items: center;
+  display: flex;
+  height: 19px;
+  margin-left: 16px;
+  min-width: 50px;
+  opacity: 0.5;
+}
+
+.mypagebookmark .bookmarkcounticon {
+  height: 15px;
+  object-fit: cover;
+  width: 16px;
+}
+
+.mypagebookmark .bookmarkcountnum {
+  align-self: flex-end;
+  letter-spacing: 0;
+  line-height: 15px;
+  margin-bottom: -4px;
+  margin-left: 10px;
+  min-height: 21px;
+  min-width: 24px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .address {
+  align-items: flex-start;
+  display: flex;
+  height: 45px;
+  margin-left: 4.5px;
+  margin-top: 46px;
+  min-width: 328px;
+}
+
+.mypagebookmark .addresstitle {
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-top: 1.5px;
+  min-height: 22px;
+  min-width: 31px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.mypagebookmark .flex-col {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -3.5px;
+  margin-left: 88px;
+  min-height: 47px;
+  width: 209px;
+}
+
+.mypagebookmark .addressold {
+  letter-spacing: 0;
+  line-height: 17px;
+  min-height: 22px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .addressstreet {
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-top: 3px;
+  min-height: 22px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .menu {
+  align-items: flex-end;
+  display: flex;
+  height: 20px;
+  margin-left: 4.5px;
+  margin-top: 15px;
+  min-width: 592px;
+}
+
+.mypagebookmark .menutitle {
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-bottom: -3.5px;
+  min-height: 22px;
+  min-width: 31px;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+.mypagebookmark .menudata {
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-bottom: -3.5px;
+  margin-left: 88px;
+  min-height: 22px;
+  min-width: 473px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .morebox {
+  align-items: flex-end;
+  align-self: flex-end;
+  display: flex;
+  height: 24px;
+  margin-right: -2.0px;
+  margin-top: 48px;
+  min-width: 313px;
+}
+
+.mypagebookmark .moreresname {
+  height: 26px;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: -4px;
+  text-align: right;
+  width: 240px;
+}
+
+.mypagebookmark .morebutton {
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: -4px;
+  margin-left: 8px;
+  min-height: 26px;
+  min-width: 65px;
+  text-align: right;
+  white-space: nowrap;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.mypagebookmark .infodataline {
+  height: 2px;
+  margin-top: 41px;
+  object-fit: cover;
+  width: 992px;
+}
+
+.mypagebookmark .footer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  position: absolute;
+  top: 220px;
+  width: 1921px;
+}
+
+.mypagebookmark .x239 {
+  background-color: var(--blue-romance);
+  height: 12px;
+  width: 1920px;
+}
+
+.mypagebookmark .overlap-group1 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 359px;
+  min-width: 1921px;
+  padding: 100.2px 150px;
+}
+
+.mypagebookmark .flex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 7.78px;
+  min-width: 890px;
+}
+
+.mypagebookmark .flex-row-3 {
+  align-items: center;
+  display: flex;
+  height: 110px;
+  min-width: 626px;
+}
+
+.mypagebookmark .happve {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 50px;
+  font-weight: 700;
+  height: 70px;
+  letter-spacing: 0;
+  line-height: 28px;
+  margin-bottom: 14.0px;
+  width: 194px;
+}
+
+.mypagebookmark .flex-col-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 263px;
+  min-height: 110px;
+  width: 169px;
+}
+
+.mypagebookmark .contact-us {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .x236 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.mypagebookmark .address-1 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 4px;
+  margin-top: 7px;
+  min-height: 80px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .flex-col-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 83px;
+  min-height: 110px;
+  width: 181px;
+}
+
+.mypagebookmark .links {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .x237 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.mypagebookmark .text-3 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-left: 7px;
+  margin-top: 7px;
+  min-height: 80px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .flex-col-3 {
+  align-items: flex-start;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14.0px;
+  margin-left: 82px;
+  min-height: 129px;
+  width: 182px;
+}
+
+.mypagebookmark .follow-us {
+  letter-spacing: 0.56px;
+  line-height: 14px;
+  margin-left: 4px;
+  min-height: 20px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .x238 {
+  align-self: flex-end;
+  background-color: var(--rhino);
+  height: 1px;
+  margin-top: 2px;
+  width: 160px;
+}
+
+.mypagebookmark .text-4 {
+  letter-spacing: -0.14px;
+  line-height: 20px;
+  margin-top: 6px;
+  min-height: 100px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .stopeatingm-eat {
+  color: var(--rhino);
+  font-family: var(--font-family-floodstd-regular);
+  font-size: var(--font-size-xxxxxl);
+  letter-spacing: 0;
+  line-height: 46px;
+  margin-left: 307px;
+  min-height: 138px;
+  min-width: 158px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.mypagebookmark .back {
+  background-color: var(--rhino);
+  height: 776px;
+  left: 0;
+  position: absolute;
+  top: 214px;
+  width: 262px;
+}
+
+.mypagebookmark .flex-col-4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 595px;
+  min-height: 678px;
+  position: absolute;
+  top: 54px;
+  width: 992px;
+}
+
+.mypagebookmark .resultbox-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  width: 992px;
+}
+
+.mypagebookmark .resultbox-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 39px;
+  min-height: 320px;
+  width: 992px;
+}
+
+.mypagebookmark .flex-col-5 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 214px;
+  position: absolute;
+  top: 0;
+  width: 262px;
+}
+
+.mypagebookmark .mypagebutton {
+  align-items: flex-start;
+  background-color: var(--rhino);
+  cursor: pointer;
+  display: flex;
+  height: 107px;
+  justify-content: flex-end;
+  min-width: 260px;
+  padding: 35.5px 50px;
+}
+
+.mypagebookmark .mypagetext {
+  letter-spacing: 0;
+  line-height: 36px;
+  min-height: 35px;
+  white-space: nowrap;
+}
+
+.mypagebookmark .bookmarkbutton {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 107px;
+  justify-content: flex-end;
+  min-width: 260px;
+  padding: 35.5px 60px;
+}
+
+.mypagebookmark .bookmarktext {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: var(--font-size-xxxl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 36px;
+  min-height: 35px;
+  white-space: nowrap;
+}
+
+
+/* screen - header-unknown */
+
+.header-unknown {
+  align-items: flex-start;
+  background-color: #ffffff;
+  display: flex;
+  /* width: 1920px; */
+  position: fixed;
+  z-index: 1;
+  
+  margin-top: -770px;
+}
+
+.header-unknown .overlap-group {
+  height: 128px;
+  position: relative;
+  min-width: 1920px;
+
+
+}
+
+.header-unknown .header-buttons {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  height: 128px;
+  left: 0;
+  padding: 19px 197.5px;
+  position: absolute;
+  top: 0;
+}
+
+.header-unknown .header-title {
+  align-self: flex-end;
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-extrabold);
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 55px;
+  min-height: 69px;
+  min-width: 190px;
+  text-align: center;
+  white-space: nowrap;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-commu {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 717px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 88px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-signup {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-con {
+  letter-spacing: -0.18px;
+  line-height: 24px;
+  margin-left: 75px;
+  margin-top: 2.0px;
+  min-height: 23px;
+  min-width: 64px;
+  white-space: nowrap;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.header-unknown .header-login {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 35px;
+  min-width: 160px;
+  padding: 10.5px 55px;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .header-logintext {
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 23px;
+  min-width: 48px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.header-unknown .header-search {
+  align-items: flex-start;
+  display: flex;
+  height: 46px;
+  left: 429px;
+  position: absolute;
+  top: 43px;
+}
+
+.header-unknown .header-searchdropdown {
+  align-items: flex-start;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  min-width: 74px;
+  padding: 15px 23px;
+
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.header-unknown .header-searchtextboxtext {
+  height: 21px;
+  object-fit: cover;
+  width: 31px;
+}
+
+.header-unknown .header-searchinput {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  margin-left: 5px;
+  min-width: 342px;
+  padding: 12px 22px;
+
+  border: 0;
+  outline: 0;
+
+  color: var(--rhino);
+  font-family: var(--font-family-applesd_gothic_neo-light);
+  font-size: 14px;
+
+}
+
+.header-unknown .header-searchtextboxtext-1 {
+  height: 21px;
+  object-fit: cover;
+  width: 139px;
+}
+
+.header-unknown .header-searchbutton {
+  align-items: flex-end;
+  align-self: flex-end;
+  background-color: var(--rhino);
+  border-radius: 100px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 11px;
+  min-width: 150px;
+  padding: 9.5px 49px;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .header-searchbuttontext {
+  color: var(--blue-romance);
+  font-family: var(--font-family-applesd_gothic_neo-bold);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  min-height: 21px;
+  min-width: 50px;
+  white-space: nowrap;
+}
+
+.header-unknown .header-page {
+  align-items: flex-end;
+  background-color: var(--blue-romance);
+  border-radius: 24px;
+  display: flex;
+  height: 48px;
+  justify-content: flex-end;
+  margin-left: 55px;
+  min-width: 48px;
+  padding: 6.1px;
+
+  border: 0;
+  outline: 0;
+}
+
+.header-unknown .icon-awesome-user-circle {
+  height: 35px;
+  object-fit: cover;
+  width: 35px;
+}

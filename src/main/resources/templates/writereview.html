@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="css/writereview/css/writereview.css"  th:href="@{/css/writereview/css/writereview.css}" />
+    <link rel="stylesheet" type="text/css" href="css/writereview/css/styleguide.css" th:href="@{/css/writereview/css/styleguide.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/writereview/css/globals.css" th:href="@{/css/writereview/css/globals.css}" />
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="writereview" />
+    <div class="container-center-horizontal">
+      <div class="writereview screen">
+
+        <div class="overlap-group1">
+          
+          <header class="header-unknown">
+            <div class="overlap-group">
+              <div class="header-buttons">
+    
+                <!-- 메인으로 -->
+              <form th:action="@{/}" method="get">
+                <button class="header-title">Happve</button>
+              </form>
+              
+              <!-- 커뮤니티로 -->
+              <form th:action="@{/api/reviewList}" method="get">
+                <button class="header-commu">평점 및 리뷰</button>
+              </form>
+              
+              <!-- 회원가입으로 -->
+              <form th:action="@{/signup}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-signup">회원가입</button>
+              </form>
+              
+              <!-- 건의하기로 -->
+              <form th:action="@{/suggestion}" method="get">
+                <button class="header-con">건의하기</button>
+              </form>
+              
+              <form th:action="@{/mypage}" method="get" sec:authorize="isAuthenticated()">
+                <button class="headermypage">
+                  <img class="icon-awesome-user-circle" src="/css/headerunknown/img/icon-awesome-user-circle-1@1x.png" />
+                </button>
+              </form>
+              
+              <!-- 로그인 -->
+              <form th:action="@{/login}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그인</div>
+                </button>
+              </form>
+              
+              <!-- 로그아웃 -->
+              <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그아웃</div>
+                </button>
+              </form>
+                
+              </div>
+
+              <!-- 상단검색 -->
+              <form th:action="@{/index/upSearch}" method="GET">
+
+                <button type="submit" class="searchbutton"><div class="search">Search</div></button>
+                <input type="text" class="searchtextbox" placeholder="식당 또는 음식" name="keyword"><img class="texttext" src="css/searchresult/img/texttext@1x.png" />
+              </form>
+    
+            </div>
+          </header>
+          
+        </div>
+
+
+        <div class="overlap-group-1">
+          <h1 class="title-1">#stop<br />Eating<br />meat</h1>
+          <div class="overlap-group2-1 border-1px-rhino-2">
+
+            <div class="text1">리뷰등록</div>
+            <div class="text2">식당에 대한 여러분의 의견 남겨주세요.</div>
+            <div class="ratingtext">얼만나 만족 하셨나요?</div>
+
+            <!-- 리뷰등록 폼 시작 -->
+            <form th:action="@{|/api/${ra.crtfc_upso_mgt_sno}/review|}" th:object="${reviewForm}" enctype="multipart/form-data" method="post">
+
+              <!-- 별점 -->
+              
+              <div class="rating">
+                <!-- <img class="starfill" src="img/starfill-1@1x.png" />
+                <img class="star" src="img/starfill-1@1x.png" />
+                <img class="star" src="img/staroutline-1@1x.png" />
+                <img class="star" src="img/staroutline-1@1x.png" />
+                <img class="star" src="img/staroutline-1@1x.png" /> -->
+                
+              <div class="star-rating space-x-4 mx-auto">
+                <input type="radio" id="5-stars" name="rating" th:field="*{rating}" value="5"/>
+	              <label for="5-stars" class="star pr-4">★</label>
+              	<input type="radio" id="4-stars" name="rating" th:field="*{rating}" value="4"/>
+	              <label for="4-stars" class="star">★</label>
+	              <input type="radio" id="3-stars" name="rating" th:field="*{rating}" value="3"/>
+	              <label for="3-stars" class="star">★</label>
+	              <input type="radio" id="2-stars" name="rating" th:field="*{rating}" value="2"/>
+	              <label for="2-stars" class="star">★</label>
+                <input type="radio" id="1-star" name="rating" th:field="*{rating}"  value="1"/>
+                <label for="1-star" class="star">★</label>
+              </div>
+
+
+
+              </div>
+  
+              <!-- 리뷰입력 박스 -->
+              <textarea id="content" th:field="*{content}" class="writebox border-1px-rhino-2">리뷰를 입력하세요</textarea>
+  
+              <div class="flex-row">
+
+              <!-- 파일 업로드 -->
+                <div data-name="fileDiv" class="form-group filebox bs3-primary">
+                  <label for="file_0" class="col-sm-2 control-label"></label><br>
+                  <div class="col-sm-10">
+                  <input type="text" class="upload-name" value="파일 찾기" readonly />
+                  <label for="file_0" class="control-label"></label>
+                  <input type="file" name="files" id="file_0" class="upload-hidden" onchange="changeFilename(this)" />
+                
+                  <button type="button" onclick="addFile()" >
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" onclick="removeFile(this)" >
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </button>
+                </div>
+              
+              </div>
+
+            </div>
+
+          <div class="flex-row-1">
+
+                <!-- 리뷰등록버튼 -->
+                <button id="btnDiv" class="uploadbutton">
+                  <div class="overlap-group">
+                    <div class="back"></div>
+                    <div class="text applesdgothicneo-bold-rhino-18px">등록하기</div>
+                  </div>
+                </button>
+
+            </form>
+            <!-- 리뷰등록 폼 끝 -->
+
+              <button class="cancelbutton">
+                <div class="overlap-group">
+                  <div class="back"></div>
+                  <div class="text applesdgothicneo-bold-rhino-18px">취소</div>
+                </div>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+
+        <footer class="footer">
+          <div class="x7"></div>
+          <div class="flex-row-2">
+            <div class="flex-row-3">
+              <div class="flex-row-4">
+                <div class="happve">Happve</div>
+                <div class="flex-col">
+                  <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+                  <div class="x4"></div>
+                  <p class="address komet-light-rhino-14px">
+                    123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+                  </p>
+                </div>
+              </div>
+              <div class="flex-col-1">
+                <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+                <div class="x5"></div>
+                <p class="text-1 komet-light-rhino-14px">
+                  The issue<br />How we help<br />Get involved<br />Latest news
+                </p>
+              </div>
+            </div>
+            <div class="flex-col-2">
+              <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+              <div class="x6"></div>
+              <div class="text-2 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+            </div>
+            <div class="stopeatingm-eat">#stop<br />EATING<br />MEat</div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous">
+      </script>
+		<script type="text/javascript">
+			/*<![CDATA[*/
+
+			let fileId = 0; /*[- 파일 인덱스 처리용 전역 변수 -]*/
+
+			function addFile() {
+				const fileDivs = $('div[data-name="fileDiv"]');
+				if (fileDivs.length > 2) {
+					alert('파일은 최대 3개까지 업로드 할 수 있습니다.');
+					return false;
+				}
+				fileId++;
+				console.log(fileId);
+			
+				const fileHtml = `
+					<div data-name="fileDiv" class="form-group filebox bs3-primary">
+						<label for="file_${fileId}" class="col-sm-2 control-label"></label>
+						<div class="col-sm-10">
+							<input type="text" class="upload-name" value="파일 찾기" readonly />
+							<label for="file_${fileId}" class="control-label"></label>
+							<input type="file" name="files" id="file_${fileId}" class="upload-hidden" onchange="changeFilename(this)" />
+			
+							<button type="button" onclick="removeFile(this)">
+								<i class="fa fa-minus" aria-hidden="true"></i>
+							</button>
+						</div>
+					</div>
+					
+				`;
+			
+				$('#btnDiv').before(fileHtml);
+			}
+
+			/*[- end of function -]*/
+			function removeFile(elem) {
+
+				const prevTag = $(elem).prev().prop('tagName');
+				if (prevTag === 'BUTTON') {
+					const file = $(elem).prevAll('input[type="file"]');
+					const filename = $(elem).prevAll('input[type="text"]');
+					file.val('');
+					filename.val('파일 찾기');
+					return false;
+				}
+			
+				const target = $(elem).parents('div[data-name="fileDiv"]');
+				target.remove();
+			}
+			/*[- end of function -]*/
+
+			function changeFilename(file) {
+
+				file = $(file);
+				const filename = file[0].files[0].name;
+				const target = file.prevAll('input');
+				console.log(filename);
+				target.val(filename);
+			}
+			/*[- end of function -]*/
+
+			/*]]>*/
+		</script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="detail/image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+  <meta name="og:type" content="website" />
+  <meta name="_csrf" th:content="${_csrf.token}">
+  <meta name="_csrf_header" th:content="${_csrf.headerName}">
+  <meta name="twitter:card" content="photo" />
+  <link rel="stylesheet" type="text/css" href="css/detail/css/detail.css" th:href="@{/css/detail/css/detail.css}" />
+  <link rel="stylesheet" type="text/css" href="css/detail/css/styleguide.css"
+    th:href="@{/css/detail/css/styleguide.css}" />
+  <link rel="stylesheet" type="text/css" href="css/detail/css/globals.css" th:href="@{/css/detail/css/globals.css}" />
+  <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+
+</head>
+
+<body style="margin: 0; background: #ffffff; ">
+  <input type="hidden" id="anPageName" name="page" value="detail" />
+  <div class="container-center-horizontal">
+    <div class="detail screen">
+      <div class="overlap-group1">
+
+        <!-- <헤더> 평점 및 리뷰 / 회원가입 / 건의하기 / 로그인-->
+        <header class="header-unknown">
+          <div class="overlap-group">
+            <div class="header-buttons">
+
+              <!-- 메인으로 -->
+              <form th:action="@{/}" method="get">
+                <button class="header-title">Happve</button>
+              </form>
+              
+              <!-- 커뮤니티로 -->
+              <form th:action="@{/api/reviewList}" method="get">
+                <button class="header-commu">평점 및 리뷰</button>
+              </form>
+              
+              <!-- 회원가입으로 -->
+              <form th:action="@{/signup}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-signup">회원가입</button>
+              </form>
+              
+              <!-- 건의하기로 -->
+              <form th:action="@{/suggestion}" method="get">
+                <button class="header-con">건의하기</button>
+              </form>
+              
+              <form th:action="@{/mypage}" method="get" sec:authorize="isAuthenticated()">
+                <button class="headermypage">
+                  <img class="icon-awesome-user-circle" src="/css/headerunknown/img/icon-awesome-user-circle-1@1x.png" />
+                </button>
+              </form>
+              
+              <!-- 로그인 -->
+              <form th:action="@{/login}" method="get" sec:authorize="!isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그인</div>
+                </button>
+              </form>
+              
+              <!-- 로그아웃 -->
+              <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button class="header-login">
+                  <div class="header-logintext">로그아웃</div>
+                </button>
+              </form>
+
+            </div>
+
+            <!-- 상단검색 -->
+            <form th:action="@{/index/upSearch}" method="GET">
+
+              <button type="submit" class="searchbutton"><div class="search">Search</div></button>
+              <input type="text" class="searchtextbox" placeholder="식당 또는 음식" name="keyword"><img class="texttext" src="css/searchresult/img/texttext@1x.png" />
+            </form>
+
+          </div>
+        </header>
+
+      </div>
+
+      <!-- 이미지 -->
+      <!-- 첫번째 이미지 -->
+      <div class="flex-row-1">
+        <img class="img1 border-1px-dove-gray" th:each="i : ${imageToView}" th:src="'/getFiles/'+${i}" />
+      </div>
+
+      <!-- 식당정보 -->
+      <div class="infodata">
+        <div class="flex-row-2">
+          <div class="flex-col-2">
+
+            <div class="flex-row-3">
+              <!-- 식당이름 -->
+              <p class="restitle">
+                <a class="restitle" href="item.html" th:text="${ra.upso_nm}"
+                  th:href="@{/api/basic2/{crtfc_upso_mgt_sno}(crtfc_upso_mgt_sno=${ra.crtfc_upso_mgt_sno})}">
+                  업소명입니다.</a>
+              </p>
+              <!-- 별점 -->
+<!--               <div class="rating">
+                <p class="ratingpoint" th:text="${reviewavg}">4.4</p>
+              </div> -->
+            </div>
+
+            <div class="flex-row-4">
+              <!-- 읽은 카운트 -->
+              <div class="viewcount">
+                <img class="viewicon" src="css/detail/img/viewicon@1x.png" />
+                <p class="viewcountnum applesdgothicneo-regular-normal-rhino-15px">3,232</p>
+              </div>
+
+              <!-- 리뷰쓴 카운트 -->
+              <div class="writecount">
+                <img class="writecounticon" src="css/detail/img/writecounticon@1x.png" />
+                <p class="writecountnum applesdgothicneo-regular-normal-rhino-15px">21</p>
+              </div>
+
+              <!-- 북마크카운트 -->
+              <div class="bookmarkcount">
+                <img class="bookmarkcounticon" src="css/detail/img/bookmarkcounticon@1x.png" />
+                <p class="bookmarkcountnum applesdgothicneo-regular-normal-rhino-15px">142</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 리뷰쓰기버튼 -->
+          <div sec:authorize="isAuthenticated()">
+            <button class="reviewwrite" th:onclick="|location.href='@{|/api/${ra.crtfc_upso_mgt_sno}/review|}'|">
+              <img class="reviewwriteicon" src="/css/detail/img/reviewwriteicon@1x.png" />
+              <div class="reviewwritetext applesdgothicneo-regular-normal-rhino-15px">리뷰쓰기</div>
+            </button>
+          </div>
+
+          <div sec:authorize="!isAuthenticated()">
+            <button class="reviewwrite" th:onclick="|location.href='@{/login}'|">
+              <img class="reviewwriteicon" src="/css/detail/img/reviewwriteicon@1x.png" />
+              <div class="reviewwritetext applesdgothicneo-regular-normal-rhino-15px">리뷰쓰기</div>
+            </button>
+          </div>
+
+          <!-- 북마크버튼 -->
+          <span sec:authorize="!isAuthenticated()">
+            <button class="bookmark" th:onclick="|location.href='@{/login}'|">
+              <img class="bookmarkicon" src="/css/detail/img/bookmarkicon@1x.png" />
+              <div class="bookmarktext applesdgothicneo-regular-normal-rhino-15px">즐겨찾기</div>
+            </button>
+            </span>
+            
+            <input type="hidden" id="resId" th:value="${ra.crtfc_upso_mgt_sno}">
+            <span sec:authorize="isAuthenticated()">
+            <input type="hidden" id="memberId" th:value="${member.memberId}">
+            <button class="bookmark" id="bookmarkBtn">
+              <img class="bookmarkicon" src="/css/detail/img/bookmarkicon@1x.png" />
+              <div class="bookmarktext applesdgothicneo-regular-normal-rhino-15px">즐겨찾기</div>
+            </button>
+            </span>
+        </div>
+
+        <div class="flex-col-3">
+          <img class="infodataline" src="css/detail/img/infodataline@1x.png" />
+
+          <!-- 주소 -->
+          <div class="address">
+            <div class="flex-row-5">
+              <div class="addresstitle applesdgothicneo-regular-normal-rhino-17px">주소</div>
+              <p class="addressold applesdgothicneo-regular-normal-rhino-17px" th:text="${ra.rdn_code_nm}">서울특별시 어디구 김수로
+                12-1</p>
+            </div>
+            <p class="addressstreet applesdgothicneo-regular-normal-rhino-17px" th:text="${ra.rdn_detail_addr}">서울시 어디구
+              리기동1가 21-54</p>
+          </div>
+
+          <!-- 전화번호 -->
+          <div class="phone">
+            <div class="title applesdgothicneo-regular-normal-rhino-17px">전화번호</div>
+            <p class="phonenum applesdgothicneo-regular-normal-rhino-17px" th:text="${ra.tel_no}">02-1234-1234</p>
+          </div>
+
+          <!-- 음식종류 -->
+          <div class="rescategory">
+            <div class="title applesdgothicneo-regular-normal-rhino-17px">음식종류</div>
+            <p class="restext applesdgothicneo-regular-normal-rhino-17px" th:text="${ra.bizcnd_code_nm}">이탈리안</p>
+          </div>
+
+          <!-- 메뉴 -->
+          <div class="menu">
+            <div class="menutitle applesdgothicneo-regular-normal-rhino-17px">메뉴</div>
+            <p class="menudata applesdgothicneo-regular-normal-rhino-17px" th:text="${ra.food_menu}">
+              리코타베지&amp;아보카도샌드위치(락토,비건) / 플렉스 스테이크(락토,비건)
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 식당정보끝 -->
+
+      <div class="overlap-group-4">
+        <!-- Map api -->
+        <div class="mapapi">
+          <div id="map" style="width:100%;height:350px;"></div>
+          <div id="contents">
+            <form method="get" th:action="@{/map}">
+
+              <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=2ac1fa2c91bdde93952b37975c3ea8ac"></script>
+              <script th:inline="javascript">
+                var xId = [[${ra.x_cnts}]]
+                var yId = [[${ra.y_dnts}]]
+
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                        mapOption = {
+                          center: new kakao.maps.LatLng(yId, xId), // 지도의 중심좌표
+                          level: 3 // 지도의 확대 레벨
+                        };
+                var map = new kakao.maps.Map(mapContainer, mapOption);
+              </script>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 리뷰헤드 -->
+      <div class="reviewheader">
+        <img class="line16" src="/css/detail/img/infodataline@1x.png" />
+        <div class="flex-row-6">
+          <div class="reviewtotal applesdgothicneo-regular-normal-rhino-20px" th:text="|리뷰(${reviewcnt})|"></div>
+          <div class="total applesdgothicneo-regular-normal-rhino-20px">전체(21)</div>
+          <img class="line" src="/css/detail/img/line10@1x.png" />
+          <div class="x5star applesdgothicneo-regular-normal-rhino-20px" th:text="|별5개(${5})|">별5개(5)</div>
+          <img class="line" src="/css/detail/img/line10@1x.png" />
+          <div class="x4star applesdgothicneo-regular-normal-rhino-20px" th:text="|별5개(${4})|">별4개(10)</div>
+          <img class="line" src="/css/detail/img/line10@1x.png" />
+          <div class="x3star applesdgothicneo-regular-normal-rhino-20px" th:text="|별5개(${3})|">별3개(1)</div>
+          <img class="line" src="/css/detail/img/line10@1x.png" />
+          <div class="x2star applesdgothicneo-regular-normal-rhino-20px" th:text="|별5개(${2})|">별2개(0)</div>
+          <img class="line" src="/css/detail/img/line10@1x.png" />
+          <div class="x1star applesdgothicneo-regular-normal-rhino-20px" th:text="|별5개(${1})|">별1개(0)</div>
+        </div>
+      </div>
+
+      <!-- 리뷰1 -->
+      <div class="review1" th:each="review:${reviewlist}">
+        <div class="flex-row">
+          <div class="flex-col">
+            <!-- 유저이름 -->
+            <p class="reviewuser applesdgothicneo-regular-normal-rhino-15px" th:text="${review.member.nickname}"></p>
+            <!-- 유저가쓴 리뷰 수 -->
+            <div class="reviewwritecount1">
+              <img class="reviewwritecounticon" src="/css/detail/img/reviewwritecounticon1@1x.png" />
+              <p class="reviewwritecountnum applesdgothicneo-regular-normal-rhino-12px">21</p>
+            </div>
+          </div>
+
+          <div class="flex-col-1">
+            <!-- 날짜 -->
+            <p class="reviewdate applesdgothicneo-regular-normal-rhino-15px"
+              th:text="${#temporals.format(review.regdate,'yyyy-MM-dd')}"></p>
+            <div class="overlap-group-1">
+              <!-- 리뷰 이미지 리스트 -->
+              <br><br><br><br>
+              <span th:if="${review.reviewId==image.reviewId}" th:each="image:${imagelist}">
+                <img th:src="'/getFiles/'+${image.saveName}" width="200" height="200">
+              </span>
+              <!-- 리뷰내용 -->
+              <textarea style="border:none" class="reviewcontent applesdgothicneo-regular-normal-rhino-15px"
+                th:text="${review.content}">
+                  </textarea>
+            </div>
+          </div>
+          <!-- 오른쪽 별 -->
+          <div class="reviewrating">
+            <div class="overlap-group-3">
+              <p class="reviewratingtext applesdgothicneo-regular-normal-blue-romance-20px" th:text="|${review.rating}개|">
+              </p>
+              <img class="staricon" src="/css/detail/img/staricon1@1x.png" />
+            </div>
+          </div>
+          
+           <div sec:authorize="isAuthenticated()">
+           <span th:if="${review.member.nickname}==${member.nickname}">
+           <button type="submit" class="reviewDelete" th:onclick="|location.href='@{|/api/${review.crtfcUpsoMgtSno}/reviewdelete/${review.reviewId}|}'|">
+            리뷰삭제
+            </button>
+            </span>
+            </div>
+        </div>
+        
+        <img class="line-1" src="css/detail/img/infodataline@1x.png" />
+      </div>
+
+      <!-- 더보기 -->
+      <form action="" method="post">
+        <!-- <button class="morebutton">
+          <div class="text-3 applesdgothicneo-regular-normal-blue-romance-20px">더보기</div>
+          <img class="icon-ionic-ios-arrow-down" src="css/detail/img/icon-ionic-ios-arrow-down@1x.png" />
+        </button> -->
+      </form>
+
+      <footer class="footer">
+        <div class="overlap-group2-1">
+          <div class="footerback">
+            <div class="footerback2"></div>
+            <div class="footerback1"></div>
+          </div>
+          <div class="x236"></div>
+          <div class="x237"></div>
+          <div class="x238"></div>
+          <div class="ftitle">Happve</div>
+          <div class="stopeatingm-eat">#stop<br />EATING<br />MEat</div>
+          <p class="text-1 komet-light-rhino-14px">The issue<br />How we help<br />Get involved<br />Latest news</p>
+          <div class="text-2 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+          <p class="address-1 komet-light-rhino-14px">
+            123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+          </p>
+          <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+          <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+          <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+  
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+      $("#bookmarkBtn").on("click",function(){
+		  
+		  var restaurantId=$("#resId").val();
+		  var memberId=$("#memberId").val();
+		  
+		  $.ajax({
+			  type:"POST",
+			  url:"/bookmark/"+memberId+"/"+restaurantId,
+	            dataType:"text",
+	            headers : {
+	                "Content-type" : "application/json",
+	                "X-HTTP-Method-Override" : "POST"
+	            },
+	            data:JSON.stringify({
+	            	memberId:memberId,
+	            	restaurantId:restaurantId
+	            }),
+	            
+	            success:function(result){
+	            	if(result==="Create")
+	            	alert("즐겨찾기에 등록하였습니다.");
+	            	else
+	            	alert("즐겨찾기를 취소하였습니다.")
+	            }
+			  
+		  });//end ajax
+		  
+	  }); //end bookmarkBtn
+      
+      var token = $("meta[name='_csrf']").attr("content");
+      var header = $("meta[name='_csrf_header']").attr("content");
+      $(document).ajaxSend(function(e, xhr, options) { xhr.setRequestHeader(header, token); });
+      
+      </script>
+</body>
+
+</html>

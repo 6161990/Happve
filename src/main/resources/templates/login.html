@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+      <link rel="stylesheet" type="text/css" href="css/login/css/login.css"  th:href="@{/css/login/css/login.css}" />
+      <link rel="stylesheet" type="text/css" href="css/login/css/styleguide.css" th:href="@{/css/login/css/styleguide.css}"/>
+      <link rel="stylesheet" type="text/css" href="css/login/css/globals.css" th:href="@{/css/login/css/globals.css}" />
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="login" />
+    <div class="container-center-horizontal">
+      <div class="login screen">
+        <div class="overlap-group1">
+
+          <!-- 헤더 -->
+          <header class="header-unknown">
+            <div class="overlap-group">
+              <div class="header-buttons">
+    
+               <!-- 메인으로 -->
+                <form th:action="@{/}" method="get">
+                  <button class="header-title">Happve</button>
+                </form>
+                
+                <!-- 커뮤니티로 -->
+                <form action="/api/reviewList" method="get">
+                  <button class="header-commu">평점 및 리뷰</button>
+                </form>
+                
+                <!-- 회원가입으로 -->
+                <form th:action="@{/signup}" method="get">
+                  <button class="header-signup">회원가입</button>
+                </form>
+                
+                <!-- 건의하기로 -->
+                <form action="" method="get">
+                  <button class="header-con">건의하기</button>
+                </form>
+                
+                <!-- 로그인 -->
+                <form action="" method="get">
+                  <button class="header-login">
+                    <div class="header-logintext">로그인</div>
+                  </button>
+                </form>
+                
+              </div>
+
+                <!-- 상단검색 -->
+                <form th:action="@{/index/upSearch}" method="GET">
+
+                    <button type="submit" class="searchbutton"><div class="search">Search</div></button>
+                    <input type="text" class="searchtextbox" placeholder="식당 또는 음식" name="keyword"><img class="texttext" src="css/searchresult/img/texttext@1x.png" />
+                </form>
+    
+            </div>
+          </header>
+
+        </div>
+
+
+       <div class="overlap-group">
+				<div class="backimg">
+					<div class="x197"></div>
+				</div>
+
+				<div class="loginbox">
+					<div class="logintext-1">로그인</div>
+
+					<form th:action="@{/login}" method="post">
+						<!-- id입력 -->
+						<div class="idinput">
+							<div class="id">닉네임 또는 이메일</div>
+
+							<input id="username" name="username" type="text"
+								class="idinputext" placeholder="이메일 또는 닉네임을 입력하세요"></input>
+							<!--  <small style="color: white" class="invalid-feedback">이메일 또는 닉네임을 입력하세요</small><br> -->
+							<img class="line9" src="css/login/img/line18@1x.png" />
+						</div>
+
+						<!-- 비밀번호입력 -->
+						<div class="passinput">
+							<div class="pass">비밀번호</div>
+							<input id="password" name="password" type="password"
+								class="passinputext" placeholder="비밀번호를 입력하세요"></input> <img
+								class="line18" src="css/login/img/line18@1x.png" />
+						</div>
+						<div>
+							<br> <input id="rememberMe" type="checkbox"
+								name="remember-me" checked /> <label class="textmessage" style="color: white"
+								for="rememberMe">로그인 유지</label>
+						</div>
+						<br><br>
+						<div th:if="${param.error}" role="alert">
+							<p class="textmessage" style="color: white">이메일(또는 닉네임)과 패스워드가 정확하지 않습니다.</p>
+						</div>
+						<button class="loginbutton">
+							<div class="overlap-group2-1">
+								<div class="logingbuttonback"></div>
+								<div class="loginbuttontext">로그인 하기</div>
+							</div>
+						</button>
+					</form>
+
+				</div>
+			</div>
+
+        <footer class="footer">
+          <div class="x239"></div>
+          <div class="flex-row">
+            <div class="flex-row-1">
+              <div class="flex-row-2">
+                <div class="happve">Happve</div>
+                <div class="flex-col">
+                  <div class="contact-us komet-regular-normal-rhino-14px">CONTACT US</div>
+                  <div class="x236"></div>
+                  <p class="address komet-light-rhino-14px">
+                    123 Anywhere St.<br />Cityname, NY 11206<br />(123) 456-7890<br />contact@npo.org
+                  </p>
+                </div>
+              </div>
+              <div class="flex-col-1">
+                <div class="links komet-regular-normal-rhino-14px">LINKS</div>
+                <div class="x237"></div>
+                <p class="text-1 komet-light-rhino-14px">
+                  The issue<br />How we help<br />Get involved<br />Latest news
+                </p>
+              </div>
+            </div>
+            <div class="flex-col-2">
+              <div class="follow-us komet-regular-normal-rhino-14px">FOLLOW US</div>
+              <div class="x238"></div>
+              <div class="text-2 komet-light-rhino-14px">Facebook<br />Twitter<br />Instagram<br />Medium</div>
+            </div>
+            <div class="stopeatingm-eat">#stop<br />EATING<br />MEat</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
