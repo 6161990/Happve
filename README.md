@@ -9,7 +9,7 @@
 <br>
 
 ## 1. 제작 기간 & 참여 인원
-* 2021년 08월 09일 ~ 2021년 8월 30일
+* 2021년 08월 09일 ~ 2021년 08월 30일
 * 팀 프로젝트 (6명)
 * 맡은 역할 : 식당 상세보기, 건의하기, 리뷰 모아보기 페이지 기능 구현
 
@@ -23,16 +23,17 @@
 * Spring Security
 * Spring JPA
 
+
 `Front-end`  
 * HTML, CSS3
 * JavaScript, jQuery
+
 
 `Tool & Program`   
 * IntelliJ IDEA 2021-03v
 * Navicat Premium 15.0
 * Visual Studio Code
 * Adobe XD
-
 
 <br>
 
