@@ -40,7 +40,7 @@
 
 ## 3. ERD 설계 
 
-<img width="500" alt="Happve-ERD" src="https://user-images.githubusercontent.com/74708028/132154658-c11a63ac-b37e-4af3-a3ee-4970a13a6c6f.png">
+<img width="400" alt="Happve-ERD" src="https://user-images.githubusercontent.com/74708028/132154658-c11a63ac-b37e-4af3-a3ee-4970a13a6c6f.png">
 
 
 <br>
@@ -69,42 +69,53 @@
    * ##### 리뷰쓰기 & 즐겨찾기
    * ##### 다른 사용자들이 작성한 해당 비건 식당 리뷰
    
-   
   <br>
   
-✔ JSONParse와 Jackson 라이브러리인 ObjectMapper를 이용해 Json 데이터를 자바 객체로 parsing 하는 것이 이 페이지의 핵심 구현입니다. 
+✔ 이 페이지의 핵심 구현은 JSONParse와 Jackson 라이브러리인 ObjectMapper를 이용해 Json 데이터를 자바 객체로 parsing 하는 것입니다.
+  > ##### 우선 해당 페이지는 식당의 고유 번호를 @PathVariable로 받아와 해당 식당 데이터에 접근합니다. 
+  > ##### 트리 구조로 되어있는 JSON node를 JSONObject와 JSONArray 형변환을 통해 꺼내어 RestaurantAPI 자바 객체로 매핑합니다.
 
-  > ##### 트리 구조로 되어있는 JSON node를 JSONObject와 JSONArray 형변환을 통해 꺼내어 RestaurantAPI 자바 객체로 매핑 시켜 주었습니다. 
-  > ##### @JsonProperty를 이용해 대문자로 이루어진 오픈 API 데이터를 소문자로 이루어진 자바 객체 변수에 매핑되도록 지정해주었습니다. 
-  > ##### 그 외 index.jsp , author-post.jsp 에서도 글 상세를 보기위해 `PostDetailProc`로 넘어옵니다.     
-
-📝 [코드확인](https://github.com/6161990/Happve/blob/35cf106adf4be73e7dfddc681fa759e7ce1f35c4/src/main/java/com/kh/happve/controller/ApiController.java#L84)
-
-<br>
-
-📍 기존코드 
-* `글 작성(write-post.jsp)`, `나의 가장 최신글`, `글 목록(author-post.jsp, index.jsp)` 각각의 servlet을 만들어 게시물 고유번호 받는 경우,  
-* 글 상세 페이지 `blog-detail.jsp`로 가는 모든 경우의 수마다 servlet을 만들면 중복되는 코드가 많았기 때문에 비효율적이었습니다. 
- 
-📍 개선된 코드 
-* 사용자가 보고싶은 게시물 고유번호를 넘겨 받을 때 key값을 각각 다르게 설정하기
-* 조건문으로 null 값을 체크해 post_idx 확인 
-
-
-<br>
-
-
-## 7. 그 외 트러블 슈팅
-* 테이블에 방금 INSERT한 데이터 RETURN 처리 문제 📌[코드확인](https://github.com/6161990/Blog-Project/blob/d1d108e7898eb24ad37249049a3f27f4c4410098/Blog/src/main/java/dao/PostDAO.java#L66)
-* `내가 관심갈만한 글` 에서 '내'가 없는 경우, 예외 처리 문제 📌[코드확인](https://github.com/6161990/Blog-Project/blob/d1d108e7898eb24ad37249049a3f27f4c4410098/Blog/src/main/webapp/index.jsp#L850)
-  * ###### 홈화면(index.jsp)에서 `내가 관심갈만한 글` 목록은 내가 작성한 최신 글과 같은 카테고리 글 목록을 가져오는 것이었습니다.    
-    ###### 하지만, 비 로그인 사용자나 아직 작성글이 없는 사용자의 경우는 data가 없어서 errorPage로 가게되었습니다.     
-    ###### 이런 사용자의 경우 `내가 관심갈만한 글` 대신 `전체글목록`을 띄워줄까 고민했습니다.    
-    ###### 하지만 해당 사이트가 이제 막 서비스를 시작했다는 가정 하에 많은 데이터를 확보하는 것이 우선이라 판단하여    
-    ###### 아직 작성글이 없다면 글작성을 유도하는 버튼으로 예외처리를 했습니다.     
+  <br>
   
+📍 기존코드 
 
 <br>
+<img width="520" alt="20210907143525" src="https://user-images.githubusercontent.com/74708028/132293722-4691d7c8-662a-4028-a70b-39c3c9c0e0e5.png">
+
+* writeValueAsString, readTree 메소드를 통해 JsonNode로 변환된 객체를 하나씩 변수에 담습니다.
+* 변환을 마친 변수를 다시 자바 객체로 매핑합니다.
+* 해당 사진에는 전부 다 담기지 않았지만 변수가 31개인 상황에서 해당 방식은 상당히 비효율적입니다.
+
+<br>
+  
+  
+📍 개선된 코드  📝 [코드확인](https://github.com/6161990/Happve/blob/35cf106adf4be73e7dfddc681fa759e7ce1f35c4/src/main/java/com/kh/happve/controller/ApiController.java#L84)
+* String으로 변환된 JsonObject 객체를 readValue 메소드를 이용해 자바 객체로 매핑합니다.
+* @JsonProperty를 이용해 대문자로 이루어진 오픈 API 데이터를 소문자로 이루어진 자바 객체 변수에 매핑되도록 지정합니다.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+▶ 6.2 식당에 대한 리뷰 별점 List에서 ArrayIndexOutOfBoundsException 이 발생하는 문제
+  
+📍 기존코드
+
+<img width="523" alt="20210907150325" src="https://user-images.githubusercontent.com/74708028/132292421-304dde47-ba64-4718-9223-d35b5efcef04.png">
+
+* 컬렉션 배열에서 get 메소드로 인덱스를 차례로 꺼내면, 배열의 크기보다 크거나 음수 인덱스에 대한 요청일 경우 Array Index Out Of Bounds Exception이 발생합니다.
+ 
+<br>
+   
+📍 개선된 코드 📝 [코드확인](https://github.com/6161990/Happve/blob/35cf106adf4be73e7dfddc681fa759e7ce1f35c4/src/main/java/com/kh/happve/controller/ApiController.java#L111)
+* Stream의 limit 메소드와 filter, map 메소드를 통해 중간연산, forEach 메소드로 최종연산을 거쳐 데이터를 선별합니다. 
+* null값이 아닌 데이터와 컬렉션에서 필요한 데이터만 정해진 숫자만큼 전달할 수 있어 효율적입니다. 
+
+
+<br>
+
 
 
 ## 8. 페이지 설명 
