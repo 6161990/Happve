@@ -62,26 +62,23 @@
 
 
 ## 6. 핵심 트러블 슈팅 
-▶ 6.1 blog-detail.jsp로 넘어가기 전 컨텐츠 필터 처리 문제 
-* `blog-detail.jsp` 는 작성글 상세 페이지입니다. `글 작성(write-post.jsp)`, `나의 가장 최신글, 글 목록(author-post.jsp, index.jsp)` 총 3 곳에서 `PostDetailProc`를 거쳐 blog-detail.jsp로 넘어갑니다.
-* `PostDetailProc`의 역할은 다음과 같습니다. 
-   * ##### 넘어온 페이지로부터 게시물 고유번호(post_idx)를 얻어 그 글의 객체를 request setting
-   * ##### 게시물 고유 번호로 이미지 테이블에서 저장한 이미지 request setting 
-   * ##### 사이드에 위치한 `최근 글 목록`에 뿌려줄 글 목록 얻어와 request setting 
-   * ##### 하단에 위치한 `관련글`에 뿌려줄 글 목록 얻어와 request setting 
-   * ##### 해당 글의 카테고리 이름을 카테고리 테이블에서 얻어와 request setting  
+▶ 6.1 상세 페이지에서 오픈 API를 자바 객체로 매핑하는 문제
+* `detail.html`는 비건 식당 상세 페이지입니다. 해당 페이지에서 사용자는 다음과 같은 정보를 알 수 있습니다.
+   * ##### 오픈 API를 이용한 비건 식당의 정보
+   * ##### 카카오 API를 이용한 지도상 위치 정보
+   * ##### 리뷰쓰기 & 즐겨찾기
+   * ##### 다른 사용자들이 작성한 해당 비건 식당 리뷰
+   
    
   <br>
   
-✔ 이 중 포인트는 넘어온 페이지로부터 게시물 고유번호(post_idx)를 얻는 것이었습니다. 
-* request가 어디서 넘어왔냐에 따라 상세 페이지에서 보여줄 data가 달라지기 때문이었습니다. 
+✔ JSONParse와 Jackson 라이브러리인 ObjectMapper를 이용해 Json 데이터를 자바 객체로 parsing 하는 것이 이 페이지의 핵심 구현입니다. 
 
-  > ##### `글 작성`에서 넘어왔다면, 내가 방금 작성한 글이 잘 등록되었는지 바로 확인하는 용도로 보여주고 싶었고
-  > ##### `나의 가장 최신글` 메뉴를 클릭해 넘어왔다면, 최근 내가 쓴 글을 보여주고 싶었습니다.
+  > ##### 트리 구조로 되어있는 JSON node를 JSONObject와 JSONArray 형변환을 통해 꺼내어 RestaurantAPI 자바 객체로 매핑 시켜 주었습니다. 
+  > ##### @JsonProperty를 이용해 대문자로 이루어진 오픈 API 데이터를 소문자로 이루어진 자바 객체 변수에 매핑되도록 지정해주었습니다. 
   > ##### 그 외 index.jsp , author-post.jsp 에서도 글 상세를 보기위해 `PostDetailProc`로 넘어옵니다.     
 
-* 하지만 경우마다 servlet을 따로 만드는 것에 대해 고민되었습니다.     
-* 넘겨받는 게시물 고유번호의 key값을 각각 다르게 받아보면 어떨까 생각했습니다. 📝 [코드확인](https://github.com/6161990/Blog-Project/blob/34ed83a1dcbf972e363469d04d58d54406ea3896/Blog/src/main/java/controller/PostDetailProc.java#L53)
+📝 [코드확인](https://github.com/6161990/Happve/blob/35cf106adf4be73e7dfddc681fa759e7ce1f35c4/src/main/java/com/kh/happve/controller/ApiController.java#L84)
 
 <br>
 
