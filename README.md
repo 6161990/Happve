@@ -66,14 +66,12 @@
 * `detail.html`는 비건 식당 상세 페이지입니다. 해당 페이지에서 사용자는 다음과 같은 정보를 알 수 있습니다.
    * ##### 오픈 API를 이용한 비건 식당의 정보
    * ##### 카카오 API를 이용한 지도상 위치 정보
-   * ##### 리뷰쓰기 & 즐겨찾기
-   * ##### 다른 사용자들이 작성한 해당 비건 식당 리뷰
-   
-  <br>
+   * ##### 다른 사용자들이 작성한 해당 비건 식당 리뷰   
+      
   
-✔ 이 페이지의 핵심 구현은 JSONParse와 Jackson 라이브러리인 ObjectMapper를 이용해 Json 데이터를 자바 객체로 parsing 하는 것입니다.
-  > ##### 우선 해당 페이지는 식당의 고유 번호를 @PathVariable로 받아와 해당 식당 데이터에 접근합니다. 
-  > ##### 트리 구조로 되어있는 JSON node를 JSONObject와 JSONArray 형변환을 통해 꺼내어 RestaurantAPI 자바 객체로 매핑합니다.
+* 여기서 핵심 구현은 JSONParse와 Jackson 라이브러리인 ObjectMapper를 이용해 `Json 데이터를 자바 객체로 parsing` 하는 것입니다.
+  * ##### 식당의 고유 번호를 @PathVariable로 받아와 해당 식당 데이터에 접근합니다. 
+  * ##### 트리 구조로 되어있는 JSON node를 JSONObject와 JSONArray 형변환을 통해 꺼내어 RestaurantAPI 자바 객체로 매핑합니다.
 
   <br>
   
@@ -99,13 +97,13 @@
 <br>
 <br>
 
-▶ 6.2 식당에 대한 리뷰 별점 List에서 ArrayIndexOutOfBoundsException 이 발생하는 문제
+▶ 6.2 식당에 대한 리뷰 별점 List에서 `ArrayIndexOutOfBoundsException` 이 발생하는 문제
   
 📍 기존코드
 
 <img width="523" alt="20210907150325" src="https://user-images.githubusercontent.com/74708028/132292421-304dde47-ba64-4718-9223-d35b5efcef04.png">
 
-* 컬렉션 배열에서 get 메소드로 인덱스를 차례로 꺼내면, 배열의 크기보다 크거나 음수 인덱스에 대한 요청일 경우 Array Index Out Of Bounds Exception이 발생합니다.
+* 컬렉션 배열에서 get 메소드로 인덱스를 차례로 꺼내면, 배열의 크기보다 크거나 음수 인덱스에 대한 요청일 경우 `ArrayIndexOutOfBoundsException` 이 발생합니다.
  
 <br>
    
