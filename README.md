@@ -34,6 +34,7 @@
 * Navicat Premium 15.0
 * Visual Studio Code
 * Adobe XD
+* Slack , Notion
 
 <br>
 
