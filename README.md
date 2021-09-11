@@ -4,7 +4,7 @@
 
 <br>
 
-<img width="800" height="400" alt="20210710100653" src="https://user-images.githubusercontent.com/74708028/132153689-1b503aa5-2449-44f0-b46f-039e82027830.png">
+<img width="700" height="400" alt="20210710100653" src="https://user-images.githubusercontent.com/74708028/132153689-1b503aa5-2449-44f0-b46f-039e82027830.png">
 
 <br>
 
@@ -41,7 +41,7 @@
 ## 3. ERD 설계 
 
 
-<img width="607" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931744-0f1adcfb-98d2-4177-9bb6-d2fe7ddab367.png">
+<img width="707" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931744-0f1adcfb-98d2-4177-9bb6-d2fe7ddab367.png">
 
 
 <br>
@@ -96,7 +96,6 @@
 <br>
 <br>
 <br>
-<br>
 
 ▶ 6.2 식당에 대한 리뷰 별점 List에서 `ArrayIndexOutOfBoundsException` 이 발생하는 문제
   
@@ -112,7 +111,17 @@
 * Stream의 limit 메소드와 filter, map 메소드를 통해 중간연산, forEach 메소드로 최종연산을 거쳐 데이터를 선별합니다. 
 * null값이 아닌 데이터와 컬렉션에서 필요한 데이터만 정해진 숫자만큼 전달할 수 있어 효율적입니다. 
 
+<br>
+<br>
 
+▶ 6.3 그 외 처리 사항
+* 카카오 지도 API를 이용한 식당 지도상 위치 설정에서 x, y좌표변수 할당 문제  📌[코드확인](https://github.com/6161990/Happve/blob/8e2d1e37901836cb8480879f85f4a41d5d0fe95d/src/main/resources/templates/detail.html#L208)
+  * ###### Thymeleaf의 inline 을 이용하여 받아온 x, y좌표를 javascript 변수에 할당했습니다.
+* `건의하기`에서 사용자에게 메세지 전달 처리 문제
+  * ###### 사용자가 건의 내용이 전달되었는지 알 수 있도록, DB에 데이터가 삽입되면 id를 받아옵니다. 
+  * ###### 받아온 id에 값이 들어있다면 Controller에서 RedirectAttribute로 상태 값을 true로 전달합니다. 📌[코드확인](https://github.com/6161990/Happve/blob/8e2d1e37901836cb8480879f85f4a41d5d0fe95d/src/main/java/com/kh/happve/controller/SuggestionController.java#L31)
+  * ###### View에서는 status가 true면 건의사항 박스에 "건의 내용이 전달되었습니다"라는 메시지가 출력되어 사용자가 확인할 수 있습니다.  📌[코드확인](https://github.com/6161990/Happve/blob/8e2d1e37901836cb8480879f85f4a41d5d0fe95d/src/main/resources/templates/suggestion.html#L104)
+    
 <br>
 <br>
 
@@ -159,8 +168,7 @@
 #### ✔ suggestion.html
 > #### 건의하기 페이지
 > ##### 이메일과 내용을 입력할 수 있으며 @Validated를 사용해 사용자의 입력을 검증함
-> ##### 사용자가 건의 내용이 전달되었는지 알 수 있도록 RedirectAttribute로 상태 값을 true로 전달
-> ##### View에서 status가 true면 "건의 내용이 전달되었습니다"라는 메시지가 출력됨
+
 
 <br>
 
@@ -202,5 +210,28 @@
 > #### 검색 결과 페이지 
 > ##### 검색 키워드를 식당 / 음식 으로 나누어 적용하고 사용자가 드롭박스에서 선택.
 
+
 <br>
+<br>
+
+## 9. 협업방식
+#### 💡 전체적인 코드 관리 `GitHub`,  실시간 이슈 & 코드리뷰 `Slack` , 진행상황 & 스케쥴 관리 `Notion` 
+
+<br>
+
+* `GitHub` (private repository)
+
+<img width="606" alt="20210911112007" src="https://user-images.githubusercontent.com/74708028/132933058-692116c1-07e4-4ad5-bba1-d843cdfc6d5f.png">
+
+<br>
+
+* `Slack`
+
+<img width="610" alt="20210911111313" src="https://user-images.githubusercontent.com/74708028/132933066-87422c2b-50f3-4a8c-9d5b-a06a516bfb38.png">
+
+<br>
+
+* `Notion` 
+
+<img width="620" alt="20210911111633" src="https://user-images.githubusercontent.com/74708028/132933072-d098e8c0-2dcf-483f-b6f8-a3d41a306357.png">
 
