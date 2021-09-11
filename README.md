@@ -40,7 +40,7 @@
 
 ## 3. ERD 설계 
 
-<img width="807" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931702-ca746af0-f6a0-4199-836d-5ceba169b337.png">
+<img width="607" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931702-ca746af0-f6a0-4199-836d-5ceba169b337.png">
 
 
 <br>
