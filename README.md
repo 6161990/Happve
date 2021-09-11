@@ -4,7 +4,7 @@
 
 <br>
 
-<img width="700" height="400" alt="20210710100653" src="https://user-images.githubusercontent.com/74708028/132153689-1b503aa5-2449-44f0-b46f-039e82027830.png">
+<img width="800" height="400" alt="20210710100653" src="https://user-images.githubusercontent.com/74708028/132153689-1b503aa5-2449-44f0-b46f-039e82027830.png">
 
 <br>
 
@@ -40,7 +40,8 @@
 
 ## 3. ERD 설계 
 
-<img width="607" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931702-ca746af0-f6a0-4199-836d-5ceba169b337.png">
+
+<img width="607" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931744-0f1adcfb-98d2-4177-9bb6-d2fe7ddab367.png">
 
 
 <br>
