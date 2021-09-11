@@ -113,6 +113,8 @@
 
 <br>
 <br>
+<br>
+<br>
 
 ▶ 6.3 그 외 처리 사항
 * 카카오 지도 API를 이용한 식당 지도상 위치 설정에서 x, y좌표변수 할당 문제  📌[코드확인](https://github.com/6161990/Happve/blob/8e2d1e37901836cb8480879f85f4a41d5d0fe95d/src/main/resources/templates/detail.html#L208)
@@ -126,7 +128,7 @@
 <br>
 
 
-## 8. 페이지 설명 
+## 7. 페이지 설명 
 #### 본인이 구현한 부분만 ✔ 표시 
 
 #### index.html 
@@ -214,7 +216,7 @@
 <br>
 <br>
 
-## 9. 협업방식
+## 8. 협업방식
 #### 💡 전체적인 코드 관리 `GitHub`,  실시간 이슈 & 코드리뷰 `Slack` , 진행상황 & 스케쥴 관리 `Notion` 
 
 <br>
