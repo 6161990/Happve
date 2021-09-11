@@ -40,7 +40,7 @@
 
 ## 3. ERD 설계 
 
-<img width="400" alt="Happve-ERD" src="https://user-images.githubusercontent.com/74708028/132154658-c11a63ac-b37e-4af3-a3ee-4970a13a6c6f.png">
+<img width="807" alt="20210907155051" src="https://user-images.githubusercontent.com/74708028/132931702-ca746af0-f6a0-4199-836d-5ceba169b337.png">
 
 
 <br>
